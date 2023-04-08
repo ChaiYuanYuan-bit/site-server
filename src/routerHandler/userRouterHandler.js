@@ -14,8 +14,8 @@ const { axiosInstance } = require("../utils/request");
 const {initBalance} = require("../../config")
 
 
-//登录业务处理
-exports.login = (req,res,next)=>{
+//登录业务
+exports.login = (req,res)=>{
     //获取数据库
     const $db = getDataBase.$db()
     const userInfo = req.body;
@@ -25,7 +25,6 @@ exports.login = (req,res,next)=>{
          //若存在，则验证密码
          //aes解密,并bcrypt比较
         const isCorrect = bcrypt.compareSync(decrypt(userInfo.password),$db.users[userIndex].password);
-        console.log(isCorrect)
         if(isCorrect){
             const {id,username,phone,email} = $db.users[userIndex];
             const user = {id,username,phone,email}
@@ -33,17 +32,17 @@ exports.login = (req,res,next)=>{
             res.status(200).json({success:true,message:'登录成功!',token});
         }
         else{
-            res.status(400).json({success:false,message:'用户名或密码错误，请重新输入！'});
+            res.status(200).json({success:false,message:'用户名或密码错误，请重新输入！'});
         }
     }
     else{
          //若不存在，则响应错误
-        res.status(404).json({success:false,message:'用户不存在，请重新输入！'});
+        res.status(200).json({success:false,message:'用户不存在，请重新输入！'});
     }
 };
 
-//注册业务处理
-exports.register = (req,res,next)=>{
+//注册业务
+exports.register = (req,res)=>{
     //获取数据库
     const $db = getDataBase.$db()
     //用户信息
@@ -69,6 +68,33 @@ exports.register = (req,res,next)=>{
     }
     else{
         //若为空则响应错误信息
-        res.status(406).json({success:false,message:'用户名或密码不能为空！'});
+        res.status(200).json({success:false,message:'用户名或密码不能为空！'});
+    }
+};
+
+//获取用户信息
+exports.getUser = (req,res)=>{
+    //获取数据库
+    const $db = getDataBase.$db()
+    //用户信息
+    const userInfo = req.query;
+    //非空检查
+    if(userInfo && userInfo.id)
+    {
+        //查找是否已经存在该用户
+        const userIndex = $db.users.findIndex(item=>item.id===userInfo.id*1);
+        const info = $db.users[userIndex];
+        if(userIndex>=0){
+            //若存在，返回该用户,并去掉密码属性
+            res.status(200).json({success:true,userInfo:{...info,password:""}});
+        }
+        else{
+            //若不存在
+            res.status(200).json({success:false,message:"找不到该用户"});
+        }
+    }
+    else{
+        //若为空则响应错误信息
+        res.status(200).json({success:false,message:'用户id不能为空！'});
     }
 };

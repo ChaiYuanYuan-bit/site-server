@@ -12,10 +12,3 @@ exports.decrypt = (word)=>{
     let decryptedStr = decrypt.toString(CryptoJS.enc.Utf8);
     return decryptedStr.toString();
 }
-
-// //加密方法
-// exports.encrypt = (word)=>{
-//     let srcs = CryptoJS.enc.Utf8.parse(word);
-//     let encrypted = CryptoJS.AES.encrypt(srcs, key, { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
-//     return encrypted.ciphertext.toString().toUpperCase();
-// }
