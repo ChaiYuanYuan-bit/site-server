@@ -19,9 +19,10 @@ const path = require("path")
 // 引入文件系统
 const fs = require('fs');
 //登录业务
-exports.login = (req,res)=>{
+exports.login = async (req,res)=>{
     //获取数据库
-    const $db = getDataBase.$db()
+    const $db = await getDataBase.$db();
+    console.log($db)
     const userInfo = req.body;
     //查找用户
     const userIndex = $db.users.findIndex(item=>item.username===userInfo.username);
@@ -46,9 +47,9 @@ exports.login = (req,res)=>{
 };
 
 //注册业务
-exports.register = (req,res)=>{
+exports.register = async (req,res)=>{
     //获取数据库
-    const $db = getDataBase.$db()
+    const $db = await getDataBase.$db()
     //用户信息
     const regInfo = req.body;
     //非空检查
@@ -78,9 +79,9 @@ exports.register = (req,res)=>{
 };
 
 //获取用户信息
-exports.getUser = (req,res)=>{
+exports.getUser = async (req,res)=>{
     //获取数据库
-    const $db = getDataBase.$db()
+    const $db = await getDataBase.$db()
     //用户信息
     const userInfo = req.query;
     //非空检查

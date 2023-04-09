@@ -23,7 +23,6 @@ module.exports = (req,res,next)=>{
     {
         needVerify = true;
     }
-    // if(!passRoules.find(item=>item===req.path))
     if(needVerify)
     {
         const token = req.headers.token;

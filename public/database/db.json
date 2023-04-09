@@ -35,33 +35,9 @@
       "id": 2
     },
     {
+      "id": 3,
       "username": "CYY",
-      "password": "$2a$10$iR4R/5H2WkfpPjB2d1XsqetB1ngEvvZBFIGhjdX8uCFYyr5Z2.jHa",
-      "phone": "15316345481",
-      "email": "15216757930@163.com",
-      "roleType": {
-        "roleTypeId": 2,
-        "roleTypeName": "普通员工"
-      },
-      "balance": 10000,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "username": "cyy",
-      "password": "$2a$10$s8MGJl1g6xTUQ0OmITRdOOuHVQMa69iZs/XH3umcW6y0Vd2NHLkfu",
-      "phone": "15216757930",
-      "email": "449002049@qq.com",
-      "roleType": {
-        "id": 1,
-        "roleName": "管理员"
-      },
-      "balance": 10000
-    },
-    {
-      "id": 5,
-      "username": "bzh",
-      "password": "$2a$10$sZwQ7Z5n7yyqgUrNb6KISOTjK23/wYM8sIQ1o5wvyg4Sb1IpeNqvq",
+      "password": "$2a$10$5qIRj.xFFE7UJp7dBsMzkuu9VApOMm4P5obTOYIrO9oPzJYj0xYTO",
       "phone": "15216757930",
       "email": "449002049@qq.com",
       "roleType": {
