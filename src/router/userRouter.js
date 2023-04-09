@@ -1,25 +1,56 @@
 const {GET,POST,DELETE,PUT,LOGIN,REGISTER,GETUSER} = require('../utils/constant');
 const {login,register,getUser} = require('../routerHandler/userRouterHandler');
+const {isAuthorized,isExpired} = require('../utils/verifyToken')
+const {passRoules} = require('../../config')
 
 module.exports = (req,res,next)=>{
-    switch(req.method){
-        case GET:console.log(req.query);console.log(req.headers.token);
+    /*
+        token验证规则：
+            1. Get用户信息，以及POST,DELETE,PUT等修改操作均需要验证规则
+            2. GET其余信息不需要验证
+            3. POST下的登录和注册不需要验证
+    */
+    let needVerify = false;
+    if(req.method === POST && req.path !== LOGIN && req.path !== REGISTER)
+    {
+        needVerify = true;
+    }
+    else if(req.method === GET && req.path.indexOf('/users') !== -1)
+    {
+        needVerify = true;
+    }
+    else if(req.method === PUT || req.method === DELETE )
+    {
+        needVerify = true;
+    }
+    // if(!passRoules.find(item=>item===req.path))
+    if(needVerify)
+    {
+        const token = req.headers.token;
+        //验证token
+        if(!token || !isAuthorized(token))
         {
-            switch(req.path)
+            res.json({status:400,success:false,message:'未授权！'});
+            console.log('未授权！');
+            return;
+        }
+        else if(isExpired(token))
+        {
+            res.json({status:400,success:false,message:'token已过期，请重新登录！'});
+            console.log('token已过期，请重新登录');
+            return;
+        }
+    }
+    switch(req.method){
+        case GET:
+                switch(req.path)
                 {
                     case GETUSER:
                             getUser(req,res);
                             break;
                     default:next();
-                    // if(isAuthorized(req)){
-                        //     next();
-                        // }
-                        // else{
-                        //     res.status(401).send('未授权');
-                        // };
                 }
                 break;
-        }
         case POST: 
         console.log(req.body);
             {
@@ -34,12 +65,6 @@ module.exports = (req,res,next)=>{
                             register(req,res);
                             break;
                     default:next();
-                    // if(isAuthorized(req)){
-                        //     next();
-                        // }
-                        // else{
-                        //     res.status(401).send('未授权');
-                        // };
                 }
                 break;
             }
@@ -47,5 +72,4 @@ module.exports = (req,res,next)=>{
         case PUT:next();break;
         default:next();
     }
-   
 };

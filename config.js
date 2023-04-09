@@ -6,5 +6,11 @@ module.exports = {
     //baseUrl
     baseURL: "http://localhost:3000",
     //初始金额
-    initBalance:10000
+    initBalance:10000,
+    //路由过滤规则
+    passRoules : [
+        '/user/login',
+        '/user/register',
+        '/roleType'
+    ],
 }

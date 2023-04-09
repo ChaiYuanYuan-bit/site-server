@@ -45,30 +45,6 @@
       },
       "balance": 10000,
       "id": 3
-    },
-    {
-      "id": 4,
-      "username": "cyy",
-      "password": "$2a$10$s8MGJl1g6xTUQ0OmITRdOOuHVQMa69iZs/XH3umcW6y0Vd2NHLkfu",
-      "phone": "15216757930",
-      "email": "449002049@qq.com",
-      "roleType": {
-        "id": 1,
-        "roleName": "管理员"
-      },
-      "balance": 10000
-    },
-    {
-      "id": 5,
-      "username": "bzh",
-      "password": "$2a$10$sZwQ7Z5n7yyqgUrNb6KISOTjK23/wYM8sIQ1o5wvyg4Sb1IpeNqvq",
-      "phone": "15216757930",
-      "email": "449002049@qq.com",
-      "roleType": {
-        "id": 2,
-        "roleName": "普通员工"
-      },
-      "balance": 10000
     }
   ],
   "goodsType": [
