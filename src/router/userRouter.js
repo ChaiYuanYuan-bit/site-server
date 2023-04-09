@@ -15,7 +15,7 @@ module.exports = (req,res,next)=>{
     {
         needVerify = true;
     }
-    else if(req.method === GET && req.path.indexOf('/users') !== -1)
+    else if(req.method === GET && req.path === GETUSER || req.path.indexOf('/users') !== -1)
     {
         needVerify = true;
     }
