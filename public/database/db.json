@@ -45,6 +45,42 @@
         "roleName": "普通员工"
       },
       "balance": 10000
+    },
+    {
+      "id": 4,
+      "username": "111",
+      "password": "$2a$10$NiQdU7tWCk7lfDtxnhmh2eVjvFzq/0otZERF9zibi7L26pGWRfUY.",
+      "phone": "15216757930",
+      "email": "1@qq.com",
+      "roleType": {
+        "id": 1,
+        "roleName": "管理员"
+      },
+      "balance": 10000
+    },
+    {
+      "id": 5,
+      "username": "123",
+      "password": "$2a$10$QqWoO8BgbXhvmwWCwMy7AeUHDGNj6g3/CqI6S5ZYAv6cODtIyfYj6",
+      "phone": "15211111111",
+      "email": "1@qq.com",
+      "roleType": {
+        "id": 2,
+        "roleName": "普通员工"
+      },
+      "balance": 10000
+    },
+    {
+      "id": 6,
+      "username": "CYY001",
+      "password": "$2a$10$Kwdterv/eygjYKjTWXMmqOc6DHVnN6xCrjF810hJEWDE3nwj10pHK",
+      "phone": "15316345481",
+      "email": "15216757930@163.com",
+      "roleType": {
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
+      },
+      "balance": 10000
     }
   ],
   "goodsType": [

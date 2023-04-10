@@ -29,12 +29,14 @@ module.exports = (req,res,next)=>{
         //验证token
         if(!token || !isAuthorized(token))
         {
+            console.log('isAuthorized false')
             res.json({status:400,success:false,message:'未授权！'});
             console.log('未授权！');
             return;
         }
         else if(isExpired(token))
         {
+            console.log('isExpired false')
             res.json({status:400,success:false,message:'token已过期，请重新登录！'});
             console.log('token已过期，请重新登录');
             return;

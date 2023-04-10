@@ -22,7 +22,6 @@ const fs = require('fs');
 exports.login = async (req,res)=>{
     //获取数据库
     const $db = await getDataBase.$db();
-    console.log($db)
     const userInfo = req.body;
     //查找用户
     const userIndex = $db.users.findIndex(item=>item.username===userInfo.username);
