@@ -10,7 +10,8 @@
         "js": "node --harmony"
     },
     "watch": [
- 
+        "./public/database/db.json",
+        "index.js"
     ],
     "env": {
         "NODE_ENV": "development"

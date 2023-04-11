@@ -93,6 +93,30 @@
         "roleName": "管理员"
       },
       "balance": 10000
+    },
+    {
+      "id": 8,
+      "username": "CYY002",
+      "password": "$2a$10$k.otCqpXQ/dqn5Db7v9cl.kkPaA80FvPjGq43k/si1EaHkha151mS",
+      "phone": "15316345481",
+      "email": "15216757930@163.com",
+      "roleType": {
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
+      },
+      "balance": 10000
+    },
+    {
+      "id": 9,
+      "username": "CYY003",
+      "password": "$2a$10$4LCVcUSqkwwz.9FZvicT1.2zEijTPC.z75PFYv8uNToe6iGoq11ne",
+      "phone": "15316345481",
+      "email": "15216757930@163.com",
+      "roleType": {
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
+      },
+      "balance": 10000
     }
   ],
   "goodsType": [
@@ -287,6 +311,18 @@
         "imageUrl": "",
         "comments": "4.3/5.0",
         "description": "距离欢乐谷只有1.5公里"
+      }
+    },
+    {
+      "id": 4,
+      "H-S": "S03",
+      "H-L": "L02",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "上海松江万达酒店",
+        "imageUrl": "",
+        "comments": "4.8/5.0",
+        "description": "距离东华大学只有1.5公里"
       }
     }
   ],
