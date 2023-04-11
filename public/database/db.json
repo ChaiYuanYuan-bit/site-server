@@ -284,7 +284,7 @@
       "H-B": "B02",
       "detail": {
         "hotelName": "上海宝山汉庭酒店",
-        "imageUrl": "",
+        "imageUrl": "http://localhost:3000/hotel_test.jpg",
         "comments": "4.5/5.0",
         "description": "距离最近商超只有300m"
       }
@@ -296,7 +296,7 @@
       "H-B": "B02",
       "detail": {
         "hotelName": "上海宝山汉庭精品酒店",
-        "imageUrl": "",
+        "imageUrl": "http://localhost:3000/hotel_test.jpg",
         "comments": "4.7/5.0",
         "description": "距离地铁站只有500m"
       }
@@ -308,7 +308,7 @@
       "H-B": "B01",
       "detail": {
         "hotelName": "上海松江佘山如家酒店",
-        "imageUrl": "",
+        "imageUrl": "http://localhost:3000/hotel_test.jpg",
         "comments": "4.3/5.0",
         "description": "距离欢乐谷只有1.5公里"
       }
@@ -317,10 +317,10 @@
       "id": 4,
       "H-S": "S03",
       "H-L": "L02",
-      "H-B": "B01",
+      "H-B": "B03",
       "detail": {
-        "hotelName": "上海松江万达酒店",
-        "imageUrl": "",
+        "hotelName": "上海佘山格林豪泰酒店",
+        "imageUrl": "http://localhost:3000/hotel_test.jpg",
         "comments": "4.8/5.0",
         "description": "距离东华大学只有1.5公里"
       }
