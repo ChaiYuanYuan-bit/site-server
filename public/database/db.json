@@ -125,25 +125,6 @@
       "goodsName": "hotels",
       "features": [
         {
-          "id": "H-S",
-          "name": "hotelStars",
-          "description": "星级",
-          "details": [
-            {
-              "id": "S01",
-              "name": "快捷酒店"
-            },
-            {
-              "id": "S02",
-              "name": "四星级酒店"
-            },
-            {
-              "id": "S03",
-              "name": "五星级酒店"
-            }
-          ]
-        },
-        {
           "id": "H-L",
           "name": "hotelLocation",
           "description": "位置",
@@ -154,15 +135,38 @@
             },
             {
               "id": "L02",
-              "name": "松江区"
+              "name": "嘉定区"
             },
             {
               "id": "L03",
-              "name": "嘉定区"
+              "name": "浦东新区"
             },
             {
               "id": "L04",
               "name": "杨浦区"
+            }
+          ]
+        },
+        {
+          "id": "H-S",
+          "name": "hotelStars",
+          "description": "类型",
+          "details": [
+            {
+              "id": "S01",
+              "name": "经济型"
+            },
+            {
+              "id": "S02",
+              "name": "舒适型"
+            },
+            {
+              "id": "S03",
+              "name": "高档型"
+            },
+            {
+              "id": "S04",
+              "name": "豪华型"
             }
           ]
         },
@@ -173,19 +177,37 @@
           "details": [
             {
               "id": "B01",
-              "name": "如家"
-            },
-            {
-              "id": "B02",
               "name": "汉庭"
             },
             {
+              "id": "B02",
+              "name": "全季"
+            },
+            {
               "id": "B03",
-              "name": "格林豪泰"
+              "name": "桔子"
             },
             {
               "id": "B04",
-              "name": "全季"
+              "name": "橘子水晶"
+            }
+            ,
+            {
+              "id": "B05",
+              "name": "CitiGO"
+            }
+            ,
+            {
+              "id": "B06",
+              "name": "美仑"
+            },
+            {
+              "id": "B07",
+              "name": "禧玥"
+            },
+            {
+              "id": "B08",
+              "name": "美爵"
             }
           ]
         }
@@ -281,48 +303,419 @@
       "id": 1,
       "H-S": "S01",
       "H-L": "L01",
-      "H-B": "B02",
+      "H-B": "B01",
       "detail": {
-        "hotelName": "上海宝山汉庭酒店",
-        "imageUrl": "http://localhost:3000/hotel_test.jpg",
-        "comments": "4.5/5.0",
-        "description": "距离最近商超只有300m"
+        "hotelName": "汉庭上海宝钢月罗公路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_001.jpg",
+        "description": "洁净的客房，舒适的环境带给您超值睡眠体验。有高速的无线网络，免费停车场。"
       }
     },
     {
       "id": 2,
-      "H-S": "S03",
+      "H-S": "S01",
       "H-L": "L01",
-      "H-B": "B02",
+      "H-B": "B01",
       "detail": {
-        "hotelName": "上海宝山汉庭精品酒店",
-        "imageUrl": "http://localhost:3000/hotel_test.jpg",
-        "comments": "4.7/5.0",
-        "description": "距离地铁站只有500m"
+        "hotelName": "汉庭上海宝山友谊路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_002.jpg",
+        "description": "距离宝乐汇生活广场1.1公里，酒店交通便利，地铁3号线直达上海火车站。"
       }
     },
     {
       "id": 3,
       "H-S": "S01",
-      "H-L": "L02",
+      "H-L": "L01",
       "H-B": "B01",
       "detail": {
-        "hotelName": "上海松江佘山如家酒店",
-        "imageUrl": "http://localhost:3000/hotel_test.jpg",
-        "comments": "4.3/5.0",
-        "description": "距离欢乐谷只有1.5公里"
+        "hotelName": "汉庭上海罗店古镇酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_003.jpg",
+        "description": "距离地铁7号线”美兰湖站“1号口2.5公里，酒店紧邻宝山寺、震旦学院。"
       }
     },
     {
       "id": 4,
-      "H-S": "S03",
+      "H-S": "S01",
+      "H-L": "L02",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海嘉定新城白银路地铁站酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_004.jpg",
+        "description": "距离地铁11号线白银路站步行仅需3分钟路程，能直达迪士尼游乐场。"
+      }
+    },
+    {
+      "id": 5,
+      "H-S": "S01",
+      "H-L": "L02",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海嘉定叶城路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_005.jpg",
+        "description": "酒店坐落在爱里舍花园别墅小区大门口左侧。距离上海大学1.5公里，步行20分钟。"
+      }
+    },
+    {
+      "id": 6,
+      "H-S": "S01",
+      "H-L": "L04",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海复旦大学纪念路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_006.jpg",
+        "description": "地铁3号线江湾镇站2号口步行10分钟即到，酒店毗邻上海复旦大学、上海工程技术大学。"
+      }
+    },
+    {
+      "id": 7,
+      "H-S": "S01",
+      "H-L": "L04",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海五角场黄兴路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_007.jpg",
+        "description": "最新汉庭更是风格清新，位于五角场核心地段，地铁10号线国权路站步行仅需10分钟即可到达。"
+      }
+    },
+    {
+      "id": 8,
+      "H-S": "S01",
+      "H-L": "L04",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海长海医院国和路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_008.jpg",
+        "description": "酒店毗邻上海体育学院、中原城市广场（购物、餐饮、娱乐一体化），步行2分钟即可到达。"
+      }
+    },
+    {
+      "id": 9,
+      "H-S": "S01",
+      "H-L": "L04",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海五角场长海医院酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_009.jpg",
+        "description": "紧邻著名的上海长海医院，步行12分钟即可到达。酒店周边配套设施一应俱全，交通便利。"
+      }
+    },
+    {
+      "id": 10,
+      "H-S": "S01",
+      "H-L": "L03",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海八佰伴浦电路地铁站酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_010.jpg",
+        "description": "汉庭酒店陆家嘴八佰伴店坐落于陆家嘴金融贸易区。第一八佰伴购物中心步行仅需15分钟到达酒店。"
+      }
+    },
+    {
+      "id": 11,
+      "H-S": "S01",
+      "H-L": "L03",
+      "H-B": "B01",
+      "detail": {
+        "hotelName": "汉庭上海陆家嘴东方明珠新店",
+        "imageUrl": "http://localhost:3000/hotel_id_011.jpg",
+        "description": "距离上海陆家嘴金融中心约1.5公里，步行约15分钟。酒店闹中取静是您休闲、旅游、商务理想选择。"
+      }
+    },
+    {
+      "id": 12,
+      "H-S": "S02",
+      "H-L": "L01",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海美兰湖陆翔路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_012.jpg",
+        "description": "从东方智慧中汲取人文精神，从当代生活中提炼价值内涵，全季通过亲朋服务创造优质体验。"
+      }
+    },
+    {
+      "id": 13,
+      "H-S": "S02",
+      "H-L": "L01",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海宝杨路地铁站酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_013.jpg",
+        "description": "让更多人感受东方的自然得体，为4亿中产人群提升旅途生活品质。"
+      }
+    },
+    {
+      "id": 14,
+      "H-S": "S02",
+      "H-L": "L01",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海大学沪太路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_014.jpg",
+        "description": "全季酒店成立于2010年，隶属华住集团，中国领先的中档酒店品牌。"
+      }
+    },
+    {
+      "id": 15,
+      "H-S": "S02",
+      "H-L": "L02",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海大学叶城路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_015.jpg",
+        "description": "目前已覆盖中国31个省级行政区，开业已超过1100家。"
+      }
+    },
+    {
+      "id": 16,
+      "H-S": "S02",
+      "H-L": "L04",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海五角场翔殷路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_016.jpg",
+        "description": "在东方土地上，让更多人感受东方的自然得体。"
+      }
+    },
+    {
+      "id": 17,
+      "H-S": "S02",
+      "H-L": "L04",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海五角场翔殷路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_017.jpg",
+        "description": "从东方智慧中汲取人文精神，从当代生活中提炼价值内涵，全季通过亲朋服务创造优质体验。"
+      }
+    }
+    ,
+    {
+      "id": 18,
+      "H-S": "S02",
+      "H-L": "L04",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海江湾镇地铁站酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_018.jpg",
+        "description": "隶属华住集团，中国领先的中档酒店品牌。"
+      }
+    },
+    {
+      "id": 19,
+      "H-S": "S02",
+      "H-L": "L03",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海国际旅游度假区崇溪路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_019.jpg",
+        "description": "全季酒店成立于2010年，是中国领先的中档酒店品牌。"
+      }
+    },
+    {
+      "id": 20,
+      "H-S": "S02",
+      "H-L": "L03",
+      "H-B": "B02",
+      "detail": {
+        "hotelName": "全季上海陆家嘴张杨路酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_020.jpg",
+        "description": "从当代生活中提炼价值内涵，全季通过亲朋服务创造优质体验。"
+      }
+    },
+    {
+      "id": 21,
+      "H-S": "S02",
       "H-L": "L02",
       "H-B": "B03",
       "detail": {
-        "hotelName": "上海佘山格林豪泰酒店",
-        "imageUrl": "http://localhost:3000/hotel_test.jpg",
-        "comments": "4.8/5.0",
-        "description": "距离东华大学只有1.5公里"
+        "hotelName": "桔子上海嘉定新城远香湖酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_021.jpg",
+        "description": "每一次的怦然心动，都是记忆中最美的片羽时光，像一场浪漫的约会。为宾客提供优质，舒适的环境。"
+      }
+    },
+    {
+      "id": 22,
+      "H-S": "S02",
+      "H-L": "L03",
+      "H-B": "B03",
+      "detail": {
+        "hotelName": "桔子上海世博中心酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_022.jpg",
+        "description": "酒店位于上海市浦东新区浦东南路3470号，交通便利。酒店内含会议室、健身房、洗衣房。"
+      }
+    },
+    {
+      "id": 23,
+      "H-S": "S02",
+      "H-L": "L03",
+      "H-B": "B03",
+      "detail": {
+        "hotelName": "桔子上海浦东机场酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_023.jpg",
+        "description": "距浦东机场近在咫尺，距迪士尼乐园直线距离约7.5公里。这里由国外著名设计师设计；客房音响系统支持蓝牙。"
+      }
+    },
+    {
+      "id": 24,
+      "H-S": "S02",
+      "H-L": "L03",
+      "H-B": "B03",
+      "detail": {
+        "hotelName": "桔子上海新国际博览中心酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_024.jpg",
+        "description": "酒店以加州阳光主题打造，极具设计风格的物业建筑。全方位的智能化科技，小度智能音箱可以通过语音唤醒操控电视机。"
+      }
+    },
+    {
+      "id": 25,
+      "H-S": "S03",
+      "H-L": "L01",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海大学大场酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_025.jpg",
+        "description": "坐落于上海市宝山区大场镇场中路大场老镇嘉年华内，毗邻上海大学、静安大融城。"
+      }
+    },
+    {
+      "id": 26,
+      "H-S": "S03",
+      "H-L": "L01",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海五角场酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_026.jpg",
+        "description": "处于宝山、杨浦、虹口三区交界之地，周边有轨交18号线财经大学站（步行8分钟左右）直达。"
+      }
+    },
+    {
+      "id": 27,
+      "H-S": "S03",
+      "H-L": "L02",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海安亭酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_027.jpg",
+        "description": "交通便利，沿11号线可直达上海迪斯尼乐园，上海赛车场等景点。酒店南临上海大众一汽公司总部，北接占地70公顷的上海汽车博览公园。"
+      }
+    },
+    {
+      "id": 28,
+      "H-S": "S03",
+      "H-L": "L02",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海江桥万达酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_028.jpg",
+        "description": "距离虹桥机场5.1公里。距离国家会展中心7公里。宁静，却光彩夺目，美丽慑人。"
+      }
+    },
+    {
+      "id": 29,
+      "H-S": "S03",
+      "H-L": "L03",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海国际旅游度假区康桥酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_029.jpg",
+        "description": "这里马伊琍和靳东的电视剧《我的前半生》拍摄地，酒店风格延续建筑主体古典与奢华之风，并运用现代设计线条简洁、质感细腻的手法。"
+      }
+    },
+    {
+      "id": 30,
+      "H-S": "S03",
+      "H-L": "L03",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海陆家嘴世博中心酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_030.jpg",
+        "description": "以'大道至简，上善若水'的设计理念，酒店位于浦建路靠近浦东南路，属于上海市陆家嘴金融贸易核心区域。"
+      }
+    },
+    {
+      "id": 31,
+      "H-S": "S03",
+      "H-L": "L03",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海国际旅游度假区周浦万达酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_031.jpg",
+        "description": "桔子水晶上海国际旅游度假区周浦万达酒店坐落于浦东新区素有'小上海'之称的周浦镇上。"
+      }
+    },
+    {
+      "id": 32,
+      "H-S": "S03",
+      "H-L": "L03",
+      "H-B": "B04",
+      "detail": {
+        "hotelName": "桔子水晶上海陆家嘴金融中心酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_032.jpg",
+        "description": "当水晶邂逅阳光，便有了七彩的绚烂。中西结合的丰富餐饮，多功能会议室。"
+      }
+    },
+    {
+      "id": 33,
+      "H-S": "S03",
+      "H-L": "L04",
+      "H-B": "B05",
+      "detail": {
+        "hotelName": "上海五角场国航路 CitiGO 欢阁酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_033.jpg",
+        "description": "CitiGO 是华住集团旗下中高档酒店品牌，名字取自英文“City，Go!”。CitiGO 始终坚持初心，精益求精。"
+      }
+    },
+    {
+      "id": 34,
+      "H-S": "S03",
+      "H-L": "L03",
+      "H-B": "B05",
+      "detail": {
+        "hotelName": "上海陆家嘴东方明珠 CitiGO 酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_034.jpg",
+        "description": "住在 CitiGO 很“有趣”。开门不用房卡，看电视不用遥控器，连空调、灯光、窗帘都能用手机智能控制。"
+      }
+    },
+    {
+      "id": 35,
+      "H-S": "S03",
+      "H-L": "L01",
+      "H-B": "B06",
+      "detail": {
+        "hotelName": "上海共康美仑酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_035.jpg",
+        "description": "上海共康美仑酒店系涉外标准 4 星级酒店，位于北上海商业购物中心地带，坐拥宝山万达，毗邻绿地风尚广场。"
+      }
+    },
+    {
+      "id": 36,
+      "H-S": "S04",
+      "H-L": "L02",
+      "H-B": "B07",
+      "detail": {
+        "hotelName": "上海嘉定禧玥酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_036.jpg",
+        "description": "酒店地处嘉定老城区中心，闹中取静，周边吃购游娱样样便捷。"
+      }
+    },
+    {
+      "id": 37,
+      "H-S": "S04",
+      "H-L": "L03",
+      "H-B": "B07",
+      "detail": {
+        "hotelName": "上海陆家嘴禧玥酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_037.jpg",
+        "description": "酒店不仅拥有顶楼全江景餐厅和酒吧，在您享用美食的同时可以欣赏黄浦江的美丽风光。"
+      }
+    },
+    {
+      "id": 38,
+      "H-S": "S04",
+      "H-L": "L03",
+      "H-B": "B08",
+      "detail": {
+        "hotelName": "上海证大美爵酒店",
+        "imageUrl": "http://localhost:3000/hotel_id_038.jpg",
+        "description": "上海证大美爵酒店座落于充满活力的上海浦东金融文化中心，毗邻上海新国际博览中心。"
       }
     }
   ],
