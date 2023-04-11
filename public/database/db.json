@@ -101,67 +101,67 @@
       "goodsName": "hotels",
       "features": [
         {
-          "id": 1,
-          "feature": "hotelStars",
+          "id": "H-S",
+          "name": "hotelStars",
           "description": "星级",
           "details": [
             {
-              "id": 1,
+              "id": "S01",
               "name": "快捷酒店"
             },
             {
-              "id": 2,
+              "id": "S02",
               "name": "四星级酒店"
             },
             {
-              "id": 3,
+              "id": "S03",
               "name": "五星级酒店"
             }
           ]
         },
         {
-          "id": 2,
-          "feature": "hotelLocation",
+          "id": "H-L",
+          "name": "hotelLocation",
           "description": "位置",
           "details": [
             {
-              "id": 1,
+              "id": "L01",
               "name": "宝山区"
             },
             {
-              "id": 2,
+              "id": "L02",
               "name": "松江区"
             },
             {
-              "id": 3,
+              "id": "L03",
               "name": "嘉定区"
             },
             {
-              "id": 4,
+              "id": "L04",
               "name": "杨浦区"
             }
           ]
         },
         {
-          "id": 3,
-          "feature": "hotelBrand",
+          "id": "H-B",
+          "name": "hotelBrand",
           "description": "品牌",
           "details": [
             {
-              "id": 1,
+              "id": "B01",
               "name": "如家"
             },
             {
-              "id": 2,
-              "location": "汉庭"
+              "id": "B02",
+              "name": "汉庭"
             },
             {
-              "id": 3,
-              "location": "嘉定区"
+              "id": "B03",
+              "name": "格林豪泰"
             },
             {
-              "id": 4,
-              "location": "杨浦区"
+              "id": "B04",
+              "name": "全季"
             }
           ]
         }
@@ -173,67 +173,48 @@
       "goodsName": "scenics",
       "features": [
         {
-          "id": 1,
-          "feature": "hotelStars",
-          "description": "星级",
+          "id": "T-T",
+          "name": "hotelStars",
+          "description": "类型",
           "details": [
             {
-              "id": 1,
-              "name": "快捷酒店"
+              "id": "T01",
+              "name": "游乐园"
             },
             {
-              "id": 2,
-              "name": "四星级酒店"
+              "id": "T02",
+              "name": "电影"
             },
             {
-              "id": 3,
-              "name": "五星级酒店"
+              "id": "T03",
+              "name": "博物馆"
+            },
+            {
+              "id": "T04",
+              "name": "公园"
             }
           ]
         },
         {
-          "id": 2,
-          "feature": "hotelLocation",
+          "id": "T-L",
+          "name": "hotelLocation",
           "description": "位置",
           "details": [
             {
-              "id": 1,
+              "id": "L01",
               "name": "宝山区"
             },
             {
-              "id": 2,
+              "id": "L02",
               "name": "松江区"
             },
             {
-              "id": 3,
+              "id": "L03",
               "name": "嘉定区"
             },
             {
-              "id": 4,
+              "id": "L04",
               "name": "杨浦区"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "feature": "hotelBrand",
-          "description": "品牌",
-          "details": [
-            {
-              "id": 1,
-              "name": "如家"
-            },
-            {
-              "id": 2,
-              "location": "汉庭"
-            },
-            {
-              "id": 3,
-              "location": "嘉定区"
-            },
-            {
-              "id": 4,
-              "location": "杨浦区"
             }
           ]
         }
@@ -243,149 +224,40 @@
     {
       "id": 3,
       "goodsName": "delicacies",
-      "features": "hotelFeatures",
-      "description": "美食小吃"
-    }
-  ],
-  "hotelFeatures": [
-    {
-      "id": 1,
       "features": [
         {
-          "id": 1,
-          "feature": "hotelStars",
-          "description": "星级",
+          "id": "F-T",
+          "name": "hotelStars",
+          "description": "类型",
           "details": [
             {
-              "id": 1,
-              "name": "快捷酒店"
+              "id": "T01",
+              "name": "中式"
             },
             {
-              "id": 2,
-              "name": "四星级酒店"
+              "id": "T02",
+              "name": "西式"
             },
             {
-              "id": 3,
-              "name": "五星级酒店"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "feature": "hotelLocation",
-          "description": "位置",
-          "details": [
-            {
-              "id": 1,
-              "name": "宝山区"
+              "id": "T03",
+              "name": "饮品"
             },
             {
-              "id": 2,
-              "name": "松江区"
-            },
-            {
-              "id": 3,
-              "name": "嘉定区"
-            },
-            {
-              "id": 4,
-              "name": "杨浦区"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "feature": "hotelBrand",
-          "description": "品牌",
-          "details": [
-            {
-              "id": 1,
-              "name": "如家"
-            },
-            {
-              "id": 2,
-              "location": "汉庭"
-            },
-            {
-              "id": 3,
-              "location": "嘉定区"
-            },
-            {
-              "id": 4,
-              "location": "杨浦区"
+              "id": "T04",
+              "name": "饮品"
             }
           ]
         }
       ],
-      "description": "星级",
-      "details": [
-        {
-          "id": 1,
-          "name": "快捷酒店"
-        },
-        {
-          "id": 2,
-          "name": "四星级酒店"
-        },
-        {
-          "id": 3,
-          "name": "五星级酒店"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "feature": "hotelLocation",
-      "description": "位置",
-      "details": [
-        {
-          "id": 1,
-          "name": "宝山区"
-        },
-        {
-          "id": 2,
-          "name": "松江区"
-        },
-        {
-          "id": 3,
-          "name": "嘉定区"
-        },
-        {
-          "id": 4,
-          "name": "杨浦区"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "feature": "hotelBrand",
-      "description": "品牌",
-      "details": [
-        {
-          "id": 1,
-          "name": "如家"
-        },
-        {
-          "id": 2,
-          "location": "汉庭"
-        },
-        {
-          "id": 3,
-          "location": "嘉定区"
-        },
-        {
-          "id": 4,
-          "location": "杨浦区"
-        }
-      ]
+      "description": "美食小吃"
     }
   ],
   "hotels": [
     {
       "id": 1,
-      "hotelStarsId": 1,
-      "hotelLocationId": 1,
-      "hotelBrandId": 2,
+      "H-S": "S01",
+      "H-L": "L01",
+      "H-B": "B02",
       "detail": {
         "hotelName": "上海宝山汉庭酒店",
         "imageUrl": "",
@@ -395,9 +267,9 @@
     },
     {
       "id": 2,
-      "hotelStarsId": 3,
-      "hotelLocationId": 1,
-      "hotelBrandId": 2,
+      "H-S": "S03",
+      "H-L": "L01",
+      "H-B": "B02",
       "detail": {
         "hotelName": "上海宝山汉庭精品酒店",
         "imageUrl": "",
@@ -407,9 +279,9 @@
     },
     {
       "id": 3,
-      "hotelStarsId": 1,
-      "hotelLocationId": 1,
-      "hotelBrandId": 1,
+      "H-S": "S01",
+      "H-L": "L02",
+      "H-B": "B01",
       "detail": {
         "hotelName": "上海松江佘山如家酒店",
         "imageUrl": "",

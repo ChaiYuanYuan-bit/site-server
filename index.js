@@ -1,11 +1,12 @@
 //引入并配置server.js
 const jsonServer = require('json-server');
+const path = require('path');
 const server = jsonServer.create();
-const router = jsonServer.router('./public/database/db.json');
+const router = jsonServer.router(path.join(__dirname,'./public/database/db.json'),{'watch':path.join(__dirname,'./public/database/db.json')});
 const middlewares = jsonServer.defaults({
     'static':'./public/source',
     'logger':true,
-    "bodyParser":true
+    "bodyParser":true,
 });
 //引入axios
 const axios  = require('axios');

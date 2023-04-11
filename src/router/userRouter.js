@@ -44,6 +44,7 @@ module.exports = (req,res,next)=>{
     }
     switch(req.method){
         case GET:
+            console.log(req.query);
                 switch(req.path)
                 {
                     case GETUSER:
