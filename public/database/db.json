@@ -303,6 +303,7 @@
       "detail": {
         "name": "汉庭上海宝钢月罗公路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_001.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_001.md",
         "description": "酒店位于万尚生活广场内，银行，超市，特色餐馆，酒吧，一应俱全。洁净的客房，舒适的环境带给您超值睡眠体验。有高速的无线网络，免费停车场。",
         "location":"中国，上海，宝山区，月罗公路 249 弄 28 号"
       }
@@ -315,6 +316,7 @@
       "detail": {
         "name": "汉庭上海宝山友谊路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_002.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_002.md",
         "description": "距离宝乐汇生活广场1.1公里，酒店交通便利，地铁3号线直达上海火车站。",
         "location":"中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层"
       }
@@ -327,6 +329,7 @@
       "detail": {
         "name": "汉庭上海罗店古镇酒店",
         "imageUrl": "http://localhost:3000/hotel_id_003.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_003.md",
         "description": "距离地铁7号线”美兰湖站“1号口2.5公里，酒店紧邻宝山寺、震旦学院。",
         "location":"中国，上海，宝山区，罗店镇市一路 188 号"
       }
@@ -339,6 +342,7 @@
       "detail": {
         "name": "汉庭上海嘉定新城白银路地铁站酒店",
         "imageUrl": "http://localhost:3000/hotel_id_004.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_004.md",
         "description": "距离地铁11号线白银路站步行仅需3分钟路程，能直达迪士尼游乐场。",
         "location":"中国，上海，嘉定区，崇信路 1501 号"
       }
@@ -351,6 +355,7 @@
       "detail": {
         "name": "汉庭上海嘉定叶城路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_005.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_005.md",
         "description": "酒店坐落在爱里舍花园别墅小区大门口左侧。距离上海大学1.5公里，步行20分钟。",
         "location":"中国，上海，嘉定区，叶城路 485 号"
       }
@@ -363,6 +368,7 @@
       "detail": {
         "name": "汉庭上海复旦大学纪念路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_006.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_006.md",
         "description": "地铁3号线江湾镇站2号口步行10分钟即到，酒店毗邻上海复旦大学、上海工程技术大学。",
         "location":"中国，上海，杨浦区，纪念路 258 号"
       }
@@ -375,6 +381,7 @@
       "detail": {
         "name": "汉庭上海五角场黄兴路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_007.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_007.md",
         "description": "最新汉庭更是风格清新，位于五角场核心地段，地铁10号线国权路站步行仅需10分钟即可到达。",
         "location":"中国，上海，杨浦区，黄兴路 1675 号五角场科技大厦 3 楼"
       }
@@ -387,6 +394,7 @@
       "detail": {
         "name": "汉庭上海长海医院国和路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_008.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_008.md",
         "description": "酒店毗邻上海体育学院、中原城市广场（购物、餐饮、娱乐一体化），步行2分钟即可到达。",
         "location":"中国，上海，杨浦区，国和路 627 号"
       }
@@ -399,6 +407,7 @@
       "detail": {
         "name": "汉庭上海五角场长海医院酒店",
         "imageUrl": "http://localhost:3000/hotel_id_009.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_009.md",
         "description": "紧邻著名的上海长海医院，步行12分钟即可到达。酒店周边配套设施一应俱全，交通便利。",
         "location":"中国，上海，杨浦区，嫩江路 2512 号"
       }
@@ -411,6 +420,7 @@
       "detail": {
         "name": "汉庭上海八佰伴浦电路地铁站酒店",
         "imageUrl": "http://localhost:3000/hotel_id_010.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_010.md",
         "description": "汉庭酒店陆家嘴八佰伴店坐落于陆家嘴金融贸易区。第一八佰伴购物中心步行仅需15分钟到达酒店。",
         "location":"中国，上海，浦东新区，崂山路 708 号"
       }
@@ -423,6 +433,7 @@
       "detail": {
         "name": "汉庭上海陆家嘴东方明珠新店",
         "imageUrl": "http://localhost:3000/hotel_id_011.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_011.md",
         "description": "距离上海陆家嘴金融中心约1.5公里，步行约15分钟。酒店闹中取静是您休闲、旅游、商务理想选择。",
         "location":"中国，上海，浦东新区，崂山路 147-153 号"
       }
@@ -435,6 +446,7 @@
       "detail": {
         "name": "全季上海美兰湖陆翔路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_012.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_012.md",
         "description": "坐落于上海宝山美兰湖罗店商圈，周边商业配套齐全，交通便利，是旅游、娱乐、休闲，度假的最佳选择。",
         "location":"中国，上海，宝山区，陆翔路 3483 号"
       }
@@ -447,6 +459,7 @@
       "detail": {
         "name": "全季上海宝杨路地铁站酒店",
         "imageUrl": "http://localhost:3000/hotel_id_013.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_013.md",
         "description": "从当代生活中提炼价值内涵，让更多人感受东方的自然得体，为4亿中产人群提升旅途生活品质。",
         "location":"中国，上海，宝山区，同济路 669 号 T9 号楼"
       }
@@ -459,6 +472,7 @@
       "detail": {
         "name": "全季上海大学沪太路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_014.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_014.md",
         "description": "位于上海市宝山区沪太路（近上大路），毗邻尚大国际，周边有尚大国际，经纬汇，东方国贸新城，尊木汇上海木文化博览园，仁济医院宝山分院，上海大学。",
         "location":"中国，上海，宝山区，沪太路 3100 号 E 座"
       }
@@ -471,6 +485,7 @@
       "detail": {
         "name": "全季上海大学叶城路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_015.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_015.md",
         "description": "距上海大学仅 700 米，距离州桥老街仅 0.6 公里；驱车至地铁 11 号线嘉定北仅 10 分钟，至虹桥国际机场仅需 25 分钟，至国家会展驱车仅需 20 分钟。",
         "location":"中国，上海，嘉定区，沪宜公路 3188-16 号"
       }
@@ -483,6 +498,7 @@
       "detail": {
         "name": "全季上海五角场翔殷路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_016.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_016.md",
         "description": "从东方智慧中汲取人文精神，从当代生活中提炼价值内涵，在东方土地上，让更多人感受东方的自然得体。",
         "location":"中国，上海，杨浦区，营口路 857 号"
       }
@@ -495,6 +511,7 @@
       "detail": {
         "name": "全季上海杨浦体育馆酒店",
         "imageUrl": "http://localhost:3000/hotel_id_017.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_017.md",
         "description": "毗邻内环杨浦大桥、上海杨浦体育馆、上海理工大学军工路校区、复旦软件园；长阳创谷、互联宝地车程约 8 分钟，新国际博览中心车程约 25 分钟。",
         "location":"中国，上海，杨浦区，周家嘴路 3815 号"
       }
@@ -507,6 +524,7 @@
       "detail": {
         "name": "全季上海江湾镇地铁站酒店",
         "imageUrl": "http://localhost:3000/hotel_id_018.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_018.md",
         "description": "成立于 2010 年，隶属华住集团，中国领先的中档酒店品牌。",
         "location":"中国，上海，杨浦区，逸仙路 661 号"
       }
@@ -519,6 +537,7 @@
       "detail": {
         "name": "全季上海国际旅游度假区崇溪路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_019.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_019.md",
         "description": "全季酒店成立于2010年，是中国领先的中档酒店品牌，提升 4 亿中产阶层的出行生活品质。",
         "location":"中国，上海，浦东新区，六灶镇崇溪路 111 弄 91 号"
       }
@@ -531,6 +550,7 @@
       "detail": {
         "name": "全季上海陆家嘴张杨路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_020.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_020.md",
         "description": "位于上海市浦东新区浦东南路(陆家嘴圈)，地铁 9 号线商城路站约 500M，距新国际博览中心车程 15 分钟左右。",
         "location":"中国，上海，浦东新区，浦东南路 1271-1289 号"
       }
@@ -543,6 +563,7 @@
       "detail": {
         "name": "桔子上海嘉定新城远香湖酒店",
         "imageUrl": "http://localhost:3000/hotel_id_021.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_021.md",
         "description": "位于上海市嘉定区白银路远香湖旁，步行至远香湖约 3 分钟。酒店毗邻嘉定图书馆、保利大剧院、嘉定文化馆、宝龙城市购物中心、瑞金医院北院、保利悦活城。",
         "location":"中国，上海，嘉定区，白银路 325 号"
       }
@@ -555,6 +576,7 @@
       "detail": {
         "name": "桔子上海世博中心酒店",
         "imageUrl": "http://localhost:3000/hotel_id_022.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_022.md",
         "description": "酒店位于上海市浦东新区浦东南路3470号，交通便利。酒店内含会议室、健身房、洗衣房。",
         "location":"中国，上海，浦东新区，浦东南路 3470 号 1 幢"
       }
@@ -567,6 +589,7 @@
       "detail": {
         "name": "桔子上海浦东机场酒店",
         "imageUrl": "http://localhost:3000/hotel_id_023.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_023.md",
         "description": "距浦东机场近在咫尺，距迪士尼乐园直线距离约7.5公里。这里由国外著名设计师设计；客房音响系统支持蓝牙。",
         "location":"中国，上海，浦东新区，祝桥镇施湾六路 566 号 3 幢"
       }
@@ -579,6 +602,7 @@
       "detail": {
         "name": "桔子上海新国际博览中心酒店",
         "imageUrl": "http://localhost:3000/hotel_id_024.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_024.md",
         "description": "酒店以加州阳光主题打造，极具设计风格的物业建筑。全方位的智能化科技，小度智能音箱可以通过语音唤醒操控电视机。",
         "location":"中国，上海，浦东新区，高科西路 2991 号 10 号楼"
       }
@@ -591,6 +615,7 @@
       "detail": {
         "name": "桔子水晶上海大学大场酒店",
         "imageUrl": "http://localhost:3000/hotel_id_025.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_025.md",
         "description": "坐落于上海市宝山区大场镇场中路大场老镇嘉年华内，毗邻上海大学、静安大融城。",
         "location":"中国，上海，宝山区，场中路 4098 弄 37 号"
       }
@@ -603,6 +628,7 @@
       "detail": {
         "name": "桔子水晶上海五角场酒店",
         "imageUrl": "http://localhost:3000/hotel_id_026.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_026.md",
         "description": "处于宝山、杨浦、虹口三区交界之地，周边有轨交18号线财经大学站（步行8分钟左右）直达。",
         "location":"中国，上海，宝山区，三门路 497 号"
       }
@@ -615,6 +641,7 @@
       "detail": {
         "name": "桔子水晶上海安亭酒店",
         "imageUrl": "http://localhost:3000/hotel_id_027.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_027.md",
         "description": "交通便利，沿11号线可直达上海迪斯尼乐园，上海赛车场等景点。酒店南临上海大众一汽公司总部，北接占地70公顷的上海汽车博览公园。",
         "location":"中国，上海，嘉定区，曹安公路 5676 号"
       }
@@ -627,6 +654,7 @@
       "detail": {
         "name": "桔子水晶上海江桥万达酒店",
         "imageUrl": "http://localhost:3000/hotel_id_028.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_028.md",
         "description": "距离虹桥机场5.1公里。距离国家会展中心7公里。宁静，却光彩夺目，美丽慑人。",
         "location":"中国，上海，嘉定区，鹤旋东路 188 号"
       }
@@ -639,6 +667,7 @@
       "detail": {
         "name": "桔子水晶上海国际旅游度假区康桥酒店",
         "imageUrl": "http://localhost:3000/hotel_id_029.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_029.md",
         "description": "这里马伊琍和靳东的电视剧《我的前半生》拍摄地，酒店风格延续建筑主体古典与奢华之风，并运用现代设计线条简洁、质感细腻的手法。",
         "location":"中国，上海，浦东新区，康桥路 1789 号"
       }
@@ -651,6 +680,7 @@
       "detail": {
         "name": "桔子水晶上海陆家嘴世博中心酒店",
         "imageUrl": "http://localhost:3000/hotel_id_030.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_030.md",
         "description": "以'大道至简，上善若水'的设计理念，酒店位于浦建路靠近浦东南路，属于上海市陆家嘴金融贸易核心区域。",
         "location":"中国，上海，浦东新区，浦建路 15 号"
       }
@@ -663,6 +693,7 @@
       "detail": {
         "name": "桔子水晶上海国际旅游度假区周浦万达酒店",
         "imageUrl": "http://localhost:3000/hotel_id_031.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_031.md",
         "description": "桔子水晶上海国际旅游度假区周浦万达酒店坐落于浦东新区素有'小上海'之称的周浦镇上。",
         "location":"中国，上海，浦东新区，沪南公路 3655 弄 2 号"
       }
@@ -675,6 +706,7 @@
       "detail": {
         "name": "桔子水晶上海陆家嘴金融中心酒店",
         "imageUrl": "http://localhost:3000/hotel_id_032.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_032.md",
         "description": "当水晶邂逅阳光，便有了七彩的绚烂。中西结合的丰富餐饮，多功能会议室。",
         "location":"中国，上海，浦东新区，潍坊路 328 号"
       }
@@ -687,6 +719,7 @@
       "detail": {
         "name": "上海五角场国航路 CitiGO 欢阁酒店",
         "imageUrl": "http://localhost:3000/hotel_id_033.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_033.md",
         "description": "CitiGO 是华住集团旗下中高档酒店品牌，名字取自英文“City，Go!”。CitiGO 始终坚持初心，精益求精。",
         "location":"中国，上海，杨浦区，国航路 89 号"
       }
@@ -699,6 +732,7 @@
       "detail": {
         "name": "上海陆家嘴东方明珠 CitiGO 酒店",
         "imageUrl": "http://localhost:3000/hotel_id_034.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_034.md",
         "description": "住在 CitiGO 很“有趣”。开门不用房卡，看电视不用遥控器，连空调、灯光、窗帘都能用手机智能控制。",
         "location":"中国，上海，浦东新区，商城路 357 号(浦城路口)"
       }
@@ -711,6 +745,7 @@
       "detail": {
         "name": "上海共康美仑酒店",
         "imageUrl": "http://localhost:3000/hotel_id_035.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_035.md",
         "description": "上海共康美仑酒店系涉外标准 4 星级酒店，位于北上海商业购物中心地带，坐拥宝山万达，毗邻绿地风尚广场。",
         "location":"中国，上海，宝山区，共康路 555 号"
       }
@@ -723,6 +758,7 @@
       "detail": {
         "name": "上海嘉定禧玥酒店",
         "imageUrl": "http://localhost:3000/hotel_id_036.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_036.md",
         "description": "嘉定禧玥隶属华住酒店集团旗下高端商务酒店品牌，酒店地处嘉定老城区中心，闹中取静，周边吃购游娱样样便捷。",
         "location":"中国，上海，嘉定区，博乐路 100 号"
       }
@@ -735,6 +771,7 @@
       "detail": {
         "name": "上海陆家嘴禧玥酒店",
         "imageUrl": "http://localhost:3000/hotel_id_037.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_037.md",
         "description": "酒店不仅拥有顶楼全江景餐厅和酒吧，在您享用美食的同时可以欣赏黄浦江的美丽风光。",
         "location":"中国，上海，浦东新区，浦明路 868 弄 3 号楼"
       }
@@ -747,6 +784,7 @@
       "detail": {
         "name": "上海证大美爵酒店",
         "imageUrl": "http://localhost:3000/hotel_id_038.jpg",
+        "mdUrl": "http://localhost:3000/hotel_id_038.md",
         "description": "上海证大美爵酒店座落于充满活力的上海浦东金融文化中心，毗邻上海新国际博览中心。",
         "location":"中国，上海，浦东新区，迎春路 1199 号"
       }
