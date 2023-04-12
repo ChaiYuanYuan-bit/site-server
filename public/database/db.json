@@ -219,7 +219,7 @@
       "goodsName": "scenics",
       "features": [
         {
-          "id": "S-T",
+          "id": "S-L",
           "name": "scenicsLocation",
           "description": "位置",
           "details": [
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "id": "S-L",
+          "id": "S-T",
           "name": "scenicsType",
           "description": "类型",
           "details": [
