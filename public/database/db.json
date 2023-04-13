@@ -304,7 +304,30 @@
         "name": "汉庭上海宝钢月罗公路酒店",
         "imageUrl": "http://localhost:3000/hotel_id_001.jpg",
         "description": "酒店位于万尚生活广场内，银行，超市，特色餐馆，酒吧，一应俱全。洁净的客房，舒适的环境带给您超值睡眠体验。有高速的无线网络，免费停车场。",
-        "location":"中国，上海，宝山区，月罗公路 249 弄 28 号"
+        "location":"中国，上海，宝山区，月罗公路 249 弄 28 号",
+        "comboType":[
+          {
+            "comboTypeId":1,
+            "comboTypeName":"标准间",
+            "comboImgUrl":"http://localhost:3000/hotel_B01_combotype_001.jpg",
+            "comboPrice":200,
+            "comboCount":8
+          },
+          {
+            "comboTypeId":2,
+            "comboTypeName":"大床房",
+            "comboImgUrl":"http://localhost:3000/hotel_B01_combotype_002.jpg",
+            "comboPrice":200,
+            "comboCount":10
+          },
+          {
+            "comboTypeId":3,
+            "comboTypeName":"家庭房",
+            "comboImgUrl":"http://localhost:3000/hotel_B01_combotype_003.jpg",
+            "comboPrice":300,
+            "comboCount":4
+          }
+        ]
       }
     },
     {
