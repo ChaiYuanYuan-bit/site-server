@@ -1091,7 +1091,7 @@
             "comboTypeId":1,
             "comboTypeName":"月若流金双床房",
             "comboIntro":"2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_001.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_001.jpg",
             "comboPrice":350,
             "comboCount":6
           },
@@ -1099,7 +1099,7 @@
             "comboTypeId":2,
             "comboTypeName":"月若流金大床房",
             "comboIntro":"1张1.8米大床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_002.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_002.jpg",
             "comboPrice":350,
             "comboCount":4
           },
@@ -1107,7 +1107,7 @@
             "comboTypeId":3,
             "comboTypeName":"月若鎏金露台房",
             "comboIntro":"1张1.8米大床 | 45m² | 有露台 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_003.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_003.jpg",
             "comboPrice":420,
             "comboCount":2
           }
@@ -1130,7 +1130,7 @@
             "comboTypeId":1,
             "comboTypeName":"月若流金双床房",
             "comboIntro":"2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_001.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_001.jpg",
             "comboPrice":350,
             "comboCount":6
           },
@@ -1138,7 +1138,7 @@
             "comboTypeId":2,
             "comboTypeName":"月若流金大床房",
             "comboIntro":"1张1.8米大床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_002.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_002.jpg",
             "comboPrice":350,
             "comboCount":4
           },
@@ -1146,7 +1146,7 @@
             "comboTypeId":3,
             "comboTypeName":"月若鎏金露台房",
             "comboIntro":"1张1.8米大床 | 45m² | 有露台 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_003.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_003.jpg",
             "comboPrice":420,
             "comboCount":2
           }
@@ -1169,7 +1169,7 @@
             "comboTypeId":1,
             "comboTypeName":"月若流金双床房",
             "comboIntro":"2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_001.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_001.jpg",
             "comboPrice":350,
             "comboCount":6
           },
@@ -1177,7 +1177,7 @@
             "comboTypeId":2,
             "comboTypeName":"月若流金大床房",
             "comboIntro":"1张1.8米大床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_002.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_002.jpg",
             "comboPrice":350,
             "comboCount":4
           },
@@ -1185,7 +1185,7 @@
             "comboTypeId":3,
             "comboTypeName":"月若鎏金露台房",
             "comboIntro":"1张1.8米大床 | 45m² | 有露台 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_003.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_003.jpg",
             "comboPrice":420,
             "comboCount":2
           }
@@ -1208,7 +1208,7 @@
             "comboTypeId":1,
             "comboTypeName":"月若流金双床房",
             "comboIntro":"2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_001.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_001.jpg",
             "comboPrice":350,
             "comboCount":6
           },
@@ -1216,15 +1216,15 @@
             "comboTypeId":2,
             "comboTypeName":"月若流金大床房",
             "comboIntro":"1张1.8米大床 | 30m² | 有窗 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_002.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_002.jpg",
             "comboPrice":350,
             "comboCount":4
           },
           {
             "comboTypeId":3,
-            "comboTypeName":"月若鎏金露台房",
+            "comboTypeName":"月若金露台房",
             "comboIntro":"1张1.8米大床 | 45m² | 有露台 | 禁烟 | 2份早餐",
-            "comboImgUrl":"http://localhost:3000/hotel_B04_combotype_003.jpg",
+            "comboImgUrl":"http://localhost:3000/hotel_B03_combotype_003.jpg",
             "comboPrice":420,
             "comboCount":2
           }
