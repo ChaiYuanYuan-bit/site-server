@@ -2,7 +2,7 @@
 const jsonServer = require('json-server');
 const path = require('path');
 const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname,'./public/database/db.json'));
+const router = jsonServer.router(path.join(__dirname,'./public/database/db.json'),{'delay':500});
 const middlewares = jsonServer.defaults({
     'static':'./public/source',
     'logger':true,

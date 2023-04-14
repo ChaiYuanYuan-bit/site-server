@@ -1,6 +1,6 @@
-const {GET,POST,DELETE,PUT,LOGIN,REGISTER,GETUSER} = require('../utils/constant');
-const {login,register,getUser} = require('../routerHandler/userRouterHandler');
-const {isAuthorized,isExpired} = require('../utils/verifyToken')
+const routes = require('../utils/constant');
+const {login,register,getUser,addOrder,verifyPayCode,payOrder} = require('../routerHandler/userRouterHandler');
+const {isAuthorized,isExpired,} = require('../utils/verifyToken')
 const {passRoules} = require('../../config')
 
 module.exports = (req,res,next)=>{
@@ -11,15 +11,15 @@ module.exports = (req,res,next)=>{
             3. POST下的登录和注册不需要验证
     */
     let needVerify = false;
-    if(req.method === POST && req.path !== LOGIN && req.path !== REGISTER)
+    if(req.method === routes.POST && req.path !== routes.LOGIN && req.path !== routes.REGISTER)
     {
         needVerify = true;
     }
-    else if(req.method === GET && req.path === GETUSER || req.path.indexOf('/users') !== -1)
+    else if(req.method === routes.GET && req.path === routes.GETUSER || req.path.indexOf('/users') !== -1)
     {
         needVerify = true;
     }
-    else if(req.method === PUT || req.method === DELETE )
+    else if(req.method === routes.PUT || req.method === routes.DELETE )
     {
         needVerify = true;
     }
@@ -43,35 +43,51 @@ module.exports = (req,res,next)=>{
         }
     }
     switch(req.method){
-        case GET:
+        case routes.GET:
             console.log(req.query);
                 switch(req.path)
                 {
-                    case GETUSER:
+                    case routes.GETUSER:
                             getUser(req,res);
                             break;
                     default:next();
                 }
                 break;
-        case POST: 
+        case routes.POST: 
         console.log(req.body);
             {
                 switch(req.path)
                 {
                     //登录
-                    case LOGIN:
+                    case routes.LOGIN:
                             login(req,res);
                             break;
                     //注册
-                    case REGISTER:
+                    case routes.REGISTER:
                             register(req,res);
+                            break;
+                    //添加订单
+                    case routes.ADD_ORDER:
+                        setTimeout(()=>{addOrder(req,res);},500);
+                            break;
+                    // //取消订单
+                    // case CANCEL_ORDER:
+                    //         cancelOrder(req,res);
+                    //         break;
+                    // 验证支付密码
+                    case routes.VERIFY_PAYCODE:
+                        setTimeout(()=>{verifyPayCode(req,res);},2000);
+                            break;
+                    // 支付订单
+                    case routes.PAY_ORDER:
+                        setTimeout(()=>{payOrder(req,res);},2000);
                             break;
                     default:next();
                 }
                 break;
             }
-        case DELETE:next();break;
-        case PUT:next();break;
+        case routes.DELETE:next();break;
+        case routes.PUT:next();break;
         default:next();
     }
 };
