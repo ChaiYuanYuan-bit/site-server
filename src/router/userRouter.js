@@ -1,5 +1,5 @@
 const routes = require('../utils/constant');
-const {login,register,getUser,addOrder,verifyPayCode,payOrder} = require('../routerHandler/userRouterHandler');
+const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder} = require('../routerHandler/userRouterHandler');
 const {isAuthorized,isExpired,} = require('../utils/verifyToken')
 const {passRoules} = require('../../config')
 
@@ -68,12 +68,12 @@ module.exports = (req,res,next)=>{
                             break;
                     //添加订单
                     case routes.ADD_ORDER:
-                        setTimeout(()=>{addOrder(req,res);},500);
+                        setTimeout(()=>{addOrder(req,res);},2000);
                             break;
-                    // //取消订单
-                    // case CANCEL_ORDER:
-                    //         cancelOrder(req,res);
-                    //         break;
+                    //取消订单
+                    case routes.CANCEL_ORDER:
+                        setTimeout(()=>{cancelOrder(req,res);},2000);
+                            break;
                     // 验证支付密码
                     case routes.VERIFY_PAYCODE:
                         setTimeout(()=>{verifyPayCode(req,res);},2000);

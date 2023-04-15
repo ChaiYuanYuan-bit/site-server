@@ -10,71 +10,11 @@
         "roleTypeId": 1,
         "roleTypeName": "管理员"
       },
-      "balance": 7000,
+      "balance": 1800,
       "orders": [
         {
           "id": 1,
-          "orderId": "62bf8106-1fee-478a-9ebe-8d1b52b1ba21"
-        },
-        {
-          "id": 2,
-          "orderId": "65aac417-6c61-48e1-90d9-efe0878cb6d0"
-        },
-        {
-          "id": 3,
-          "orderId": "29545dc5-fdb7-4453-854d-2860d4a5738d"
-        },
-        {
-          "id": 4,
-          "orderId": "73cd0c05-cb14-4b6a-8fa6-d8ea960b1826"
-        },
-        {
-          "id": 5,
-          "orderId": "ee9907ca-56ee-4809-9092-f4ad9f287c12"
-        },
-        {
-          "id": 6,
-          "orderId": "1a0ffea0-4352-402e-a9c4-2ade05549d0c"
-        },
-        {
-          "id": 7,
-          "orderId": "9a684c92-f2d1-4dc4-81d9-6dd9cf207eb0"
-        },
-        {
-          "id": 8,
-          "orderId": "0619659a-cab0-4fd9-a1b8-ec02af046103"
-        },
-        {
-          "id": 9,
-          "orderId": "05ae70c9-9567-48d5-9f4f-c40372c8728e"
-        },
-        {
-          "id": 10,
-          "orderId": "605ea706-bfd9-4a77-b541-ed6c75da91bc"
-        },
-        {
-          "id": 11,
-          "orderId": "1a498fd7-8bc9-47ad-972b-7248e4f6322c"
-        },
-        {
-          "id": 12,
-          "orderId": "acf7467c-3da6-4441-82bd-2007b765787d"
-        },
-        {
-          "id": 13,
-          "orderId": "6bd1014b-1f86-46a2-a754-1ce87683ed2f"
-        },
-        {
-          "id": 14,
-          "orderId": "bb4fdca8-5aba-4f28-bfaf-3ffdbb2c0676"
-        },
-        {
-          "id": 15,
-          "orderId": "0ac20c68-d24f-4327-aee4-e4d019ee1200"
-        },
-        {
-          "id": 16,
-          "orderId": "630e6867-bfeb-4deb-9ce8-cc0e86ae42e0"
+          "orderId": "2a2675a7-62c9-48cf-9c66-81571ec083f9"
         }
       ]
     },
@@ -202,7 +142,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 34
+            "comboCount": 99973
           },
           {
             "comboTypeId": 2,
@@ -241,7 +181,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 8
+            "comboCount": 19
           },
           {
             "comboTypeId": 2,
@@ -2494,7 +2434,7 @@
   "orderPool": [
     {
       "id": 1,
-      "orderId": "62bf8106-1fee-478a-9ebe-8d1b52b1ba21",
+      "orderId": "2a2675a7-62c9-48cf-9c66-81571ec083f9",
       "orderDetail": {
         "userId": 1,
         "goodsTypeName": "hotels",
@@ -2509,291 +2449,7 @@
         "comboPrice": 200,
         "totalPrice": 200
       },
-      "orderState": "unpay"
-    },
-    {
-      "id": 2,
-      "orderId": "65aac417-6c61-48e1-90d9-efe0878cb6d0",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 3,
-      "orderId": "29545dc5-fdb7-4453-854d-2860d4a5738d",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 4,
-      "orderId": "73cd0c05-cb14-4b6a-8fa6-d8ea960b1826",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 5,
-      "orderId": "ee9907ca-56ee-4809-9092-f4ad9f287c12",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 6,
-      "orderId": "1a0ffea0-4352-402e-a9c4-2ade05549d0c",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 7,
-      "orderId": "9a684c92-f2d1-4dc4-81d9-6dd9cf207eb0",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 8,
-      "orderId": "0619659a-cab0-4fd9-a1b8-ec02af046103",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 9,
-      "orderId": "05ae70c9-9567-48d5-9f4f-c40372c8728e",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 10,
-      "orderId": "605ea706-bfd9-4a77-b541-ed6c75da91bc",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 2,
-        "storeName": "汉庭上海宝山友谊路酒店",
-        "location": "中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 11,
-      "orderId": "1a498fd7-8bc9-47ad-972b-7248e4f6322c",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 2,
-        "storeName": "汉庭上海宝山友谊路酒店",
-        "location": "中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 12,
-      "orderId": "acf7467c-3da6-4441-82bd-2007b765787d",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 3,
-        "storeName": "汉庭上海罗店古镇酒店",
-        "location": "中国，上海，宝山区，罗店镇市一路 188 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 13,
-      "orderId": "6bd1014b-1f86-46a2-a754-1ce87683ed2f",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 14,
-      "orderId": "bb4fdca8-5aba-4f28-bfaf-3ffdbb2c0676",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 3,
-        "storeName": "汉庭上海罗店古镇酒店",
-        "location": "中国，上海，宝山区，罗店镇市一路 188 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 15,
-      "orderId": "0ac20c68-d24f-4327-aee4-e4d019ee1200",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
-      "orderState": "payed"
-    },
-    {
-      "id": 16,
-      "orderId": "630e6867-bfeb-4deb-9ce8-cc0e86ae42e0",
-      "orderDetail": {
-        "userId": 1,
-        "goodsTypeName": "hotels",
-        "goodsId": 1,
-        "storeName": "汉庭上海宝钢月罗公路酒店",
-        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
-        "comboId": 1,
-        "comboTypeName": "标准间",
-        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
-        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
-        "count": 1,
-        "comboPrice": 200,
-        "totalPrice": 200
-      },
+      "orderTime": "2023-04-15 17:41:53:243",
       "orderState": "payed"
     }
   ],
@@ -2984,7 +2640,7 @@
     {
       "id": 1,
       "state": "unpay",
-      "description": "未提交"
+      "description": "待支付"
     },
     {
       "id": 2,

@@ -20,6 +20,7 @@ const path = require("path")
 const fs = require('fs');
 // 引入封装好的guid
 const Guid = require('../utils/orderId');
+const dayjs = require("dayjs");
 
 // 登录业务
 exports.login = async (req,res)=>{
@@ -107,7 +108,7 @@ exports.getUser = async (req,res)=>{
     }
 };
 
-// 生成订单业务（此时只生成订单，状态为未支付，先减少商品数量，不扣钱）
+// 生成订单（此时只生成订单，状态为未支付，先减少商品数量，不扣钱）
 exports.addOrder = async (req,res)=>{
     // 获取数据库
     const $db = await getDataBase.$db();
@@ -143,6 +144,7 @@ exports.addOrder = async (req,res)=>{
                 comboPrice:price,
                 totalPrice
             },
+            orderTime:dayjs().format('YYYY-MM-DD HH:mm:ss:SSS').toString(),
             orderState:"unpay",
         }
         // 订单池中添加订单
@@ -166,6 +168,60 @@ exports.addOrder = async (req,res)=>{
     else
     {
         res.send({status:200,success:false,message:'下单错误！'});
+    }
+}
+
+// 取消订单 (更改订单状态为已取消，恢复商品数量)
+exports.cancelOrder = async (req,res)=>{
+    // 获取数据库
+    const $db = await getDataBase.$db();
+    // 订单Id
+    const {orderId} = req.body;
+    // 非空检查
+    if(orderId)
+    {
+        // 查找订单
+        let orderIndex = $db.orderPool.findIndex(order=>order.orderId===orderId);
+        if(orderIndex>=0)
+        {
+            //拿出订单
+            let order = $db.orderPool[orderIndex];
+            //找到所买商品类型，套餐类型，购买数量
+            const goodsTypeName = order.orderDetail.goodsTypeName;
+            const goodsId = order.orderDetail.goodsId;
+            const comboId = order.orderDetail.comboId;
+            const count = order.orderDetail.count;
+            const orderState = order.orderState;
+            console.log('orderState',orderState)
+            if(orderState === 'canceled')
+            {
+                res.send({status:200,success:false,message:`订单状态错误：是已取消的订单！`});
+            }
+            else if(orderState === 'payed'){
+                res.send({status:200,success:false,message:`订单状态错误：是已支付的账单`});
+            }
+            else
+            {
+                //恢复商品数量
+                const goodsIndex = $db[goodsTypeName].findIndex(goods=>goods.id===goodsId)
+                const comboIndex = $db[goodsTypeName][goodsIndex].detail.comboType.findIndex(combo=>combo.comboTypeId===comboId);
+                $db[goodsTypeName][goodsIndex].detail.comboType[comboIndex].comboCount += count;
+                //更改订单状态
+                $db.orderPool[orderIndex].orderState = 'canceled';
+                //写入JSON
+                writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+                .then(res.send({status:200,success:true,message:'订单已取消'}))
+                .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+                } 
+            }
+        else
+        {
+            res.send({status:200,success:false,message:'该订单不存在！',orderId})
+        }
+    }
+    else
+    {
+        res.send({status:200,success:false,message:'客户端错误！'});
     }
 }
 
@@ -218,20 +274,30 @@ exports.payOrder = async(req,res)=>{
             const totalPrice = $db.orderPool[orderIndex].orderDetail.totalPrice;
             const userIndex = $db.users.findIndex(item=>item.id===userId);
             const balance =  $db.users[userIndex].balance;
-            if(totalPrice>balance)
+            const orderState = $db.orderPool[orderIndex].orderState;
+            if(orderState === 'canceled')
             {
-                //余额不足
-                res.json({status:200,success:false,message:'余额不足'});
+                res.send({status:200,success:false,message:`订单状态错误：该订单已被取消`});
+            }
+            else if(orderState === 'payed'){
+                res.send({status:200,success:false,message:`订单状态错误：是已支付的账单`});
             }
             else{
-                //扣款
-                $db.users[userIndex].balance -= totalPrice;
-                //订单状态改为已完成
-                $db.orderPool[orderIndex].orderState = 'payed';
-                //写入JSON
-                writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
-                .then(res.send({status:200,success:true,message:`支付成功`}))
-                .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+                if(totalPrice>balance)
+                {
+                    //余额不足
+                    res.json({status:200,success:false,message:'余额不足'});
+                }
+                else{
+                    //扣款
+                    $db.users[userIndex].balance -= totalPrice;
+                    //订单状态改为已完成
+                    $db.orderPool[orderIndex].orderState = 'payed';
+                    //写入JSON
+                    writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+                    .then(res.send({status:200,success:true,message:`支付成功`}))
+                    .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+                }
             }
         }
         else{
