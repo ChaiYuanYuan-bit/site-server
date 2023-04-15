@@ -6,6 +6,10 @@ const PUT = 'PUT';
 const LOGIN = '/user/login';
 const REGISTER = '/user/register';
 const GETUSER = '/user/getone';
+const ADD_ORDER = '/order/addOrder';
+const CANCEL_ORDER = '/order/cancelOrder';
+const VERIFY_PAYCODE = '/pay/verifyPWD';
+const PAY_ORDER = '/pay/payOrder';
 module.exports = {
     POST,
     GET,
@@ -13,5 +17,9 @@ module.exports = {
     PUT,
     LOGIN,
     REGISTER,
-    GETUSER
+    GETUSER,
+    ADD_ORDER,
+    CANCEL_ORDER,
+    VERIFY_PAYCODE,
+    PAY_ORDER
 }

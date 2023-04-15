@@ -18,7 +18,10 @@ const {initBalance} = require("../../config")
 const path = require("path")
 // 引入文件系统
 const fs = require('fs');
-//登录业务
+// 引入封装好的guid
+const Guid = require('../utils/orderId');
+
+// 登录业务
 exports.login = async (req,res)=>{
     //获取数据库
     const $db = await getDataBase.$db();
@@ -45,7 +48,7 @@ exports.login = async (req,res)=>{
     }
 };
 
-//注册业务
+// 注册业务
 exports.register = async (req,res)=>{
     //获取数据库
     const $db = await getDataBase.$db()
@@ -64,7 +67,7 @@ exports.register = async (req,res)=>{
             //若不存在，则注册用户
             //先aes解密，再对密码bcrypt加密，随机椒盐长度为10
             const password = bcrypt.hashSync(decrypt(regInfo.password),10);
-            $db.users.push({id:$db.users.length+1,...regInfo,password,balance:initBalance});
+            $db.users.push({id:$db.users.length+1,...regInfo,password,balance:initBalance,orders:[]});
             //写入JSON
             writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
             .then(res.send({status:200,success:true,message:'注册成功！'}))
@@ -77,7 +80,7 @@ exports.register = async (req,res)=>{
     }
 };
 
-//获取用户信息
+// 获取用户信息
 exports.getUser = async (req,res)=>{
     //获取数据库
     const $db = await getDataBase.$db()
@@ -103,3 +106,141 @@ exports.getUser = async (req,res)=>{
         res.send({status:400,success:false,message:'用户id不能为空！'});
     }
 };
+
+// 生成订单业务（此时只生成订单，状态为未支付，先减少商品数量，不扣钱）
+exports.addOrder = async (req,res)=>{
+    // 获取数据库
+    const $db = await getDataBase.$db();
+    // 订单信息
+    const orderInfo = req.body;
+    const {userId,goodsTypeName,goodsId,comboId,count} = orderInfo;
+    // 非空检查
+    if(userId && goodsTypeName && goodsId && comboId && count)
+    {
+        // 生成订单号
+        const orderId = Guid.create();
+        // 查询价格
+        let goods = $db[goodsTypeName].find(goods=>goods.id===goodsId);
+        let combo = goods.detail.comboType.find(combos=>combos.comboTypeId===comboId);
+        let price = combo.comboPrice
+        // 计算总价
+        let totalPrice = count * price;
+        // 生成订单信息
+        let newOrder = {
+            id:$db.orderPool.length+1,
+            orderId:orderId,
+            orderDetail:{
+                userId,
+                goodsTypeName,
+                goodsId,
+                storeName:goods.detail.name,
+                location:goods.detail.location,
+                comboId,
+                comboTypeName:combo.comboTypeName,
+                comboIntro:combo.comboIntro,
+                comboImgUrl:combo.comboImgUrl,
+                count,
+                comboPrice:price,
+                totalPrice
+            },
+            orderState:"unpay",
+        }
+        // 订单池中添加订单
+        $db.orderPool.push(newOrder);
+        //用户信息orders中添加订单
+        const userIndex = $db.users.findIndex(item=>item.id===userId);
+        $db.users[userIndex].orders.push({
+            id:$db.users[userIndex].orders.length+1,
+            orderId:orderId
+        });
+        // 减少对应商品的数量
+        let goodsIndex = $db[goodsTypeName].findIndex(item=>item.id);
+        let comboIndex = goods.detail.comboType.findIndex(item=>item.comboTypeId===comboId);
+        console.log($db[goodsTypeName][goodsIndex].detail.comboType[comboIndex])
+        $db[goodsTypeName][goodsIndex].detail.comboType[comboIndex].comboCount -= count;
+        //写入JSON
+        writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+        .then(res.send({status:200,success:true,message:`已创建订单，订单编号为:${orderId}`,orderId}))
+        .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+    }
+    else
+    {
+        res.send({status:200,success:false,message:'下单错误！'});
+    }
+}
+
+// 验证支付密码
+exports.verifyPayCode = async(req,res)=>{
+    //获取数据库
+    const $db = await getDataBase.$db();
+    const userInfo = req.body;
+    const {userId,password} = userInfo;
+    //合法性检查
+    if(userId && password)
+    {
+        //查找用户
+        const userIndex = $db.users.findIndex(item=>item.id===userInfo.userId);
+        if(userIndex>=0){
+            //若存在，则验证密码
+            //aes解密,并bcrypt比较
+            const isCorrect = bcrypt.compareSync(decrypt(userInfo.password),$db.users[userIndex].password);
+            if(isCorrect){
+                res.json({status:200,success:true,message:'支付密码正确'});
+            }
+            else{
+                res.json({status:400,success:false,message:'支付密码错误'});
+            }
+        }
+        else{
+            //若不存在，则响应错误
+            res.json({status:400,success:false,message:'该用户不存在！'});
+        }
+    } else
+    {
+        res.send({status:400,success:false,message:'客户端错误'});
+    }
+}
+
+// 支付订单业务 
+exports.payOrder = async(req,res)=>{
+     //获取数据库
+     const $db = await getDataBase.$db();
+     const orderInfo = req.body;
+     const {orderId} = orderInfo;
+     //合法性检查
+    if(orderId)
+    {
+        //查找用户
+        const orderIndex = $db.orderPool.findIndex(item=>item.orderId===orderId);
+        if(orderIndex>=0){
+            //若存在，则检查用户余额
+            const userId = $db.orderPool[orderIndex].orderDetail.userId;
+            const totalPrice = $db.orderPool[orderIndex].orderDetail.totalPrice;
+            const userIndex = $db.users.findIndex(item=>item.id===userId);
+            const balance =  $db.users[userIndex].balance;
+            if(totalPrice>balance)
+            {
+                //余额不足
+                res.json({status:200,success:false,message:'余额不足'});
+            }
+            else{
+                //扣款
+                $db.users[userIndex].balance -= totalPrice;
+                //订单状态改为已完成
+                $db.orderPool[orderIndex].orderState = 'payed';
+                //写入JSON
+                writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+                .then(res.send({status:200,success:true,message:`支付成功`}))
+                .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+            }
+        }
+        else{
+            //若不存在，则响应错误
+            res.json({status:400,success:false,message:'该订单不存在！'});
+        }
+    } else
+    {
+        res.send({status:400,success:false,message:'客户端错误'});
+    }
+     console.log(orderId)
+}
