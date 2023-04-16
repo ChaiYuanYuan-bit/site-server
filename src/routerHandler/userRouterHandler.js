@@ -34,8 +34,8 @@ exports.login = async (req,res)=>{
          //aes解密,并bcrypt比较
         const isCorrect = bcrypt.compareSync(decrypt(userInfo.password),$db.users[userIndex].password);
         if(isCorrect){
-            const {id,username,phone,email} = $db.users[userIndex];
-            const user = {id,username,phone,email}
+            const {id,username,phone,email,roleType} = $db.users[userIndex];
+            const user = {id,username,phone,email,roleTypeId:roleType.roleTypeId}
             const token = "Bearer" +" " + jwt.sign(user, jwtSecretKey, {expiresIn});
             res.json({status:200,success:true,message:'登录成功!',token});
         }
