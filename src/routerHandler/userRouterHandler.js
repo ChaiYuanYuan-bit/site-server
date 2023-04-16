@@ -95,7 +95,7 @@ exports.getUser = async (req,res)=>{
         const info = $db.users[userIndex];
         if(userIndex>=0){
             //若存在，返回该用户,并去掉密码属性
-            res.send({status:200,success:true,userInfo:{...info,password:""}});
+            res.send({status:200,success:true,userInfo:{...info,password:undefined,orders:undefined}});
         }
         else{
             //若不存在
@@ -226,7 +226,7 @@ exports.cancelOrder = async (req,res)=>{
 }
 
 // 验证支付密码
-exports.verifyPayCode = async(req,res)=>{
+exports.verifyPayCode = async (req,res)=>{
     //获取数据库
     const $db = await getDataBase.$db();
     const userInfo = req.body;
@@ -235,7 +235,7 @@ exports.verifyPayCode = async(req,res)=>{
     if(userId && password)
     {
         //查找用户
-        const userIndex = $db.users.findIndex(item=>item.id===userInfo.userId);
+        const userIndex = $db.users.findIndex(item=>item.id===userId*1);
         if(userIndex>=0){
             //若存在，则验证密码
             //aes解密,并bcrypt比较
@@ -258,7 +258,7 @@ exports.verifyPayCode = async(req,res)=>{
 }
 
 // 支付订单业务 
-exports.payOrder = async(req,res)=>{
+exports.payOrder = async (req,res)=>{
      //获取数据库
      const $db = await getDataBase.$db();
      const orderInfo = req.body;
@@ -266,7 +266,7 @@ exports.payOrder = async(req,res)=>{
      //合法性检查
     if(orderId)
     {
-        //查找用户
+        //查找订单
         const orderIndex = $db.orderPool.findIndex(item=>item.orderId===orderId);
         if(orderIndex>=0){
             //若存在，则检查用户余额
@@ -308,5 +308,33 @@ exports.payOrder = async(req,res)=>{
     {
         res.send({status:400,success:false,message:'客户端错误'});
     }
-     console.log(orderId)
+}
+
+// 查询用户的订单总数量
+exports.getUserOrderNum = async (req,res)=>{
+    // 获取数据库
+    const $db = await getDataBase.$db();
+    // 用户
+    const {userId,orderState} = req.query;
+    console.log(userId,orderState)
+      //合法性检查
+      if(userId)
+      {
+          //查找用户所有订单
+        // const userIndex = $db.users.findIndex(item=>item.id===userId*1);
+        let userOrders = $db.orderPool.filter(item=>item.orderDetail.userId===userId*1);
+        if(orderState)
+        {
+            //条件过滤
+            userOrders = userOrders.filter(item=>item.orderState===orderState);
+            const orderNum = userOrders.length;
+
+        }
+        const orderNum = userOrders.length;
+        console.log('orderNum',orderNum);
+        res.send({status:200,success:true,message:'查询成功',orderNum})
+      } else
+      {
+          res.send({status:400,success:false,message:'客户端错误'});
+      }
 }
