@@ -1,5 +1,5 @@
 const routes = require('../utils/constant');
-const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder} = require('../routerHandler/userRouterHandler');
+const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder,getUserOrderNum} = require('../routerHandler/userRouterHandler');
 const {isAuthorized,isExpired,} = require('../utils/verifyToken')
 const {passRoules} = require('../../config')
 
@@ -49,6 +49,9 @@ module.exports = (req,res,next)=>{
                 {
                     case routes.GETUSER:
                             getUser(req,res);
+                            break;
+                    case routes.USER_ORDER_NUM:
+                            getUserOrderNum(req,res);
                             break;
                     default:next();
                 }
