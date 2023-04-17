@@ -374,7 +374,7 @@ exports.getUserOrderNum = async (req,res)=>{
             }
         }
         else{
-            res.send({status:200,success:false,message:'找不到该用户订单信息！',orderNum})
+            res.send({status:200,success:false,message:'找不到该用户订单信息！'})
         }
       } else
       {
