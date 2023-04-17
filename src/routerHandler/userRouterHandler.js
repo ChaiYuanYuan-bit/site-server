@@ -118,6 +118,8 @@ exports.addOrder = async (req,res)=>{
     // 非空检查
     if(userId && goodsTypeName && goodsId && comboId && count)
     {
+        //找到用户姓名
+        const userName = $db.users.find(item=>item.id===userId*1).username
         // 生成订单号
         const orderId = Guid.create();
         // 查询价格
@@ -132,6 +134,7 @@ exports.addOrder = async (req,res)=>{
             orderId:orderId,
             orderDetail:{
                 userId,
+                userName,
                 goodsTypeName,
                 goodsId,
                 storeName:goods.detail.name,
@@ -320,19 +323,41 @@ exports.getUserOrderNum = async (req,res)=>{
       //合法性检查
       if(userId)
       {
-          //查找用户所有订单
-        // const userIndex = $db.users.findIndex(item=>item.id===userId*1);
-        let userOrders = $db.orderPool.filter(item=>item.orderDetail.userId===userId*1);
-        if(orderState)
-        {
-            //条件过滤
-            userOrders = userOrders.filter(item=>item.orderState===orderState);
-            const orderNum = userOrders.length;
+          //查找用户
+        const userIndex = $db.users.findIndex(item=>item.id===userId*1);
+        if(userIndex>=0)
+        {   
+            //管理员，返回所有订单数量
+            if($db.users[userIndex].roleType.roleTypeId===1)
+            {
+                let allOrders = $db.orderPool;
+                if(orderState)
+                {
+                    //条件过滤
+                    allOrders = allOrders.filter(item=>item.orderState===orderState);
+                }
 
+                const orderNum = allOrders.length;
+                console.log('orderNum',orderNum);
+                res.send({status:200,success:true,message:'查询成功',orderNum})
+            }
+             //普通员工，返回条件过滤后的订单数量
+            else
+            {
+                let userOrders = $db.orderPool.filter(item=>item.orderDetail.userId===userId*1);
+                if(orderState)
+                {
+                    //条件过滤
+                    userOrders = userOrders.filter(item=>item.orderState===orderState);
+                }
+                const orderNum = userOrders.length;
+                console.log('orderNum',orderNum);
+                res.send({status:200,success:true,message:'查询成功',orderNum})
+            }
         }
-        const orderNum = userOrders.length;
-        console.log('orderNum',orderNum);
-        res.send({status:200,success:true,message:'查询成功',orderNum})
+        else{
+            res.send({status:200,success:false,message:'找不到该用户订单信息！',orderNum})
+        }
       } else
       {
           res.send({status:400,success:false,message:'客户端错误'});
