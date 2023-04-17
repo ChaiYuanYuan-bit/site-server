@@ -318,8 +318,9 @@ exports.getUserOrderNum = async (req,res)=>{
     // 获取数据库
     const $db = await getDataBase.$db();
     // 用户
-    const {userId,orderState} = req.query;
-    console.log(userId,orderState)
+    let {userId,orderState,searchType,keyWord} = req.query;
+    keyWord = keyWord.trim();
+    console.log({userId,orderState,searchType,keyWord:keyWord.trim()})
       //合法性检查
       if(userId)
       {
@@ -336,7 +337,24 @@ exports.getUserOrderNum = async (req,res)=>{
                     //条件过滤
                     allOrders = allOrders.filter(item=>item.orderState===orderState);
                 }
-
+                //如果搜索条件不等于all
+                if(searchType!=='all' && keyWord)
+                {
+                    console.log(searchType,keyWord)
+                    //keyWord非空时才查询
+                    switch(searchType)
+                        {
+                            case 'userName':
+                                allOrders = allOrders.filter(item=>item.orderDetail.userName.indexOf(keyWord)>=0);
+                                break;
+                            case 'storeName':
+                                allOrders = allOrders.filter(item=>item.orderDetail.storeName.indexOf(keyWord)>=0);
+                                break;
+                            case 'orderId':
+                                allOrders = allOrders.filter(item=>item.orderId.indexOf(keyWord)>=0);
+                                break;
+                        }
+                }
                 const orderNum = allOrders.length;
                 console.log('orderNum',orderNum);
                 res.send({status:200,success:true,message:'查询成功',orderNum})
