@@ -319,8 +319,6 @@ exports.getUserOrderNum = async (req,res)=>{
     const $db = await getDataBase.$db();
     // 用户
     let {userId,orderState,searchType,keyWord} = req.query;
-    keyWord = keyWord.trim();
-    console.log({userId,orderState,searchType,keyWord:keyWord.trim()})
       //合法性检查
       if(userId)
       {
@@ -340,6 +338,7 @@ exports.getUserOrderNum = async (req,res)=>{
                 //如果搜索条件不等于all
                 if(searchType!=='all' && keyWord)
                 {
+                    keyWord = keyWord.trim();
                     console.log(searchType,keyWord)
                     //keyWord非空时才查询
                     switch(searchType)
