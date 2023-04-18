@@ -179,6 +179,24 @@
       },
       "balance": 10000,
       "orders": []
+    },
+    {
+      "id": 11,
+      "username": "bbzh",
+      "password": "$2a$10$kz28IKF1P4.woqJYDII42.eBU8YoYmTLg/Vh52jNbl9UAmTP3OZ02",
+      "phone": "18361576691",
+      "email": "18361576691@163.com",
+      "roleType": {
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
+      },
+      "balance": 9340,
+      "orders": [
+        {
+          "id": 1,
+          "orderId": "580ef958-9b29-4a1f-8086-0aad13790c8d"
+        }
+      ]
     }
   ],
   "hotels": [
@@ -200,7 +218,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 99934
+            "comboCount": 99933
           },
           {
             "comboTypeId": 2,
@@ -2881,6 +2899,39 @@
       "orderState": "canceled",
       "orderStateName": "已取消",
       "finishTime": "2023-04-18 16:06:24:359"
+    },
+    {
+      "id": 13,
+      "orderId": "580ef958-9b29-4a1f-8086-0aad13790c8d",
+      "orderDetail": {
+        "userId": 11,
+        "username": "bbzh",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 37,
+        "storeName": "上海陆家嘴禧玥酒店",
+        "location": "中国，上海，浦东新区，浦明路 868 弄 3 号楼",
+        "comboId": 1,
+        "comboTypeName": "豪华江景双床房",
+        "comboIntro": "2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
+        "comboImgUrl": "http://localhost:3000/hotel_B07_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 660,
+        "dataRange": [
+          "2023-05-01",
+          "2023-05-03"
+        ],
+        "days": 2,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 660
+      },
+      "orderTime": "2023-04-18 16:29:09:023",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-18 16:29:17:011"
     }
   ],
   "roleType": [
