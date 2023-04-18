@@ -34,10 +34,18 @@ exports.login = async (req,res)=>{
          //aes解密,并bcrypt比较
         const isCorrect = bcrypt.compareSync(decrypt(userInfo.password),$db.users[userIndex].password);
         if(isCorrect){
-            const {id,username,phone,email,roleType} = $db.users[userIndex];
-            const user = {id,username,phone,email,roleTypeId:roleType.roleTypeId}
-            const token = "Bearer" +" " + jwt.sign(user, jwtSecretKey, {expiresIn});
-            res.json({status:200,success:true,message:'登录成功!',token});
+            //判断权限
+            if( $db.users[userIndex].roleType.roleTypeId==3)
+            {
+                res.json({status:200,success:false,message:'未授权用户，请联系管理员！'});
+            }
+            else
+            {
+                const {id,username,phone,email,roleType} = $db.users[userIndex];
+                const user = {id,username,phone,email,roleTypeId:roleType.roleTypeId}
+                const token = "Bearer" +" " + jwt.sign(user, jwtSecretKey, {expiresIn});
+                res.json({status:200,success:true,message:'登录成功!',token});
+            }
         }
         else{
             res.json({status:400,success:false,message:'用户名或密码错误，请重新输入！'});
@@ -114,18 +122,21 @@ exports.addOrder = async (req,res)=>{
     const $db = await getDataBase.$db();
     // 订单信息
     const orderInfo = req.body;
-    const {userId,goodsTypeName,goodsId,comboId,count} = orderInfo;
+    const {userId,goodsTypeName,goodsId,comboId,count,days,dataRange} = orderInfo;
     // 非空检查
-    if(userId && goodsTypeName && goodsId && comboId && count)
+    if(userId && goodsTypeName && goodsId && comboId && count && days && dataRange[0]&& dataRange[1])
     {
-        //找到用户姓名
-        const userName = $db.users.find(item=>item.id===userId*1).username
+        //找到用户信息
+        const user = $db.users.find(item=>item.id===userId*1);
+        const userName = user.userName;
+        const roleTypeName = user.roleType.roleTypeName;
         // 生成订单号
         const orderId = Guid.create();
         // 查询价格
         let goods = $db[goodsTypeName].find(goods=>goods.id===goodsId);
         let combo = goods.detail.comboType.find(combos=>combos.comboTypeId===comboId);
         let price = combo.comboPrice
+        let discount = 0;
         // 计算总价
         let totalPrice = count * price;
         // 生成订单信息
@@ -135,6 +146,7 @@ exports.addOrder = async (req,res)=>{
             orderDetail:{
                 userId,
                 userName,
+                roleTypeName,
                 goodsTypeName,
                 goodsId,
                 storeName:goods.detail.name,
@@ -145,10 +157,15 @@ exports.addOrder = async (req,res)=>{
                 comboImgUrl:combo.comboImgUrl,
                 count,
                 comboPrice:price,
+                dataRange,
+                days,
+                payType:["余额支付"],
+                discount,
                 totalPrice
             },
             orderTime:dayjs().format('YYYY-MM-DD HH:mm:ss:SSS').toString(),
             orderState:"unpay",
+            orderStateName:"待付款"
         }
         // 订单池中添加订单
         $db.orderPool.push(newOrder);
@@ -195,6 +212,7 @@ exports.cancelOrder = async (req,res)=>{
             const comboId = order.orderDetail.comboId;
             const count = order.orderDetail.count;
             const orderState = order.orderState;
+            // 取消订单还应该返回优惠券
             console.log('orderState',orderState)
             if(orderState === 'canceled')
             {
@@ -211,6 +229,8 @@ exports.cancelOrder = async (req,res)=>{
                 $db[goodsTypeName][goodsIndex].detail.comboType[comboIndex].comboCount += count;
                 //更改订单状态
                 $db.orderPool[orderIndex].orderState = 'canceled';
+                $db.orderPool[orderIndex].orderStateName = '已取消';
+                $db.orderPool[orderIndex].finishTime = dayjs().format('YYYY-MM-DD HH:mm:ss:SSS').toString();
                 //写入JSON
                 writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
                 .then(res.send({status:200,success:true,message:'订单已取消'}))
@@ -296,6 +316,9 @@ exports.payOrder = async (req,res)=>{
                     $db.users[userIndex].balance -= totalPrice;
                     //订单状态改为已完成
                     $db.orderPool[orderIndex].orderState = 'payed';
+                    //订单状态描述
+                    $db.orderPool[orderIndex].orderStateName = '待使用';
+                    $db.orderPool[orderIndex].finishTime = dayjs().format('YYYY-MM-DD HH:mm:ss:SSS').toString(),
                     //写入JSON
                     writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
                     .then(res.send({status:200,success:true,message:`支付成功`}))
@@ -339,7 +362,6 @@ exports.getUserOrderNum = async (req,res)=>{
                 if(searchType!=='all' && keyWord)
                 {
                     keyWord = keyWord.trim();
-                    console.log(searchType,keyWord)
                     //keyWord非空时才查询
                     switch(searchType)
                         {
@@ -379,4 +401,39 @@ exports.getUserOrderNum = async (req,res)=>{
       {
           res.send({status:400,success:false,message:'客户端错误'});
       }
+}
+
+//获取用户总数量
+exports.getUserNum = async (req,res)=>{
+     // 获取数据库
+     const $db = await getDataBase.$db();
+      // 用户
+    let {roleTypeId,searchType,keyWord} = req.query;
+    console.log(roleTypeId,searchType,keyWord)
+    let allUsers =  $db.users;
+    // 筛选对应roleTypeId的用户
+    if(roleTypeId*1!==0&&roleTypeId!==undefined)
+    {
+        allUsers = allUsers.filter(item=>item.roleType.roleTypeId===roleTypeId*1)
+    }
+     //如果搜索条件不等于all
+     if(searchType!=='all' && keyWord)
+     {
+         keyWord = keyWord.trim();
+         //keyWord非空时才查询
+         switch(searchType)
+             {
+                 case 'username':
+                    allUsers = allUsers.filter(item=>item.username.indexOf(keyWord)>=0);
+                     break;
+                 case 'phone':
+                    allUsers = allUsers.filter(item=>item.phone.indexOf(keyWord)>=0);
+                     break;
+                 case 'email':
+                    allUsers = allUsers.filter(item=>item.email.indexOf(keyWord)>=0);
+                     break;
+             }
+     }
+    let num = allUsers.length;
+    res.send({status:200,success:true,message:'查询成功',num});
 }
