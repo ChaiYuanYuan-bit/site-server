@@ -128,7 +128,7 @@ exports.addOrder = async (req,res)=>{
     {
         //找到用户信息
         const user = $db.users.find(item=>item.id===userId*1);
-        const userName = user.userName;
+        const username = user.username;
         const roleTypeName = user.roleType.roleTypeName;
         // 生成订单号
         const orderId = Guid.create();
@@ -145,7 +145,7 @@ exports.addOrder = async (req,res)=>{
             orderId:orderId,
             orderDetail:{
                 userId,
-                userName,
+                username,
                 roleTypeName,
                 goodsTypeName,
                 goodsId,
@@ -345,61 +345,52 @@ exports.getUserOrderNum = async (req,res)=>{
       //合法性检查
       if(userId)
       {
+        console.log('在查看个人订单')
           //查找用户
         const userIndex = $db.users.findIndex(item=>item.id===userId*1);
         if(userIndex>=0)
         {   
-            //管理员，返回所有订单数量
-            if($db.users[userIndex].roleType.roleTypeId===1)
+            let userOrders = $db.orderPool.filter(item=>item.orderDetail.userId===userId*1);
+            if(orderState)
             {
-                let allOrders = $db.orderPool;
-                if(orderState)
-                {
-                    //条件过滤
-                    allOrders = allOrders.filter(item=>item.orderState===orderState);
-                }
-                //如果搜索条件不等于all
-                if(searchType!=='all' && keyWord)
-                {
-                    keyWord = keyWord.trim();
-                    //keyWord非空时才查询
-                    switch(searchType)
-                        {
-                            case 'userName':
-                                allOrders = allOrders.filter(item=>item.orderDetail.userName.indexOf(keyWord)>=0);
-                                break;
-                            case 'storeName':
-                                allOrders = allOrders.filter(item=>item.orderDetail.storeName.indexOf(keyWord)>=0);
-                                break;
-                            case 'orderId':
-                                allOrders = allOrders.filter(item=>item.orderId.indexOf(keyWord)>=0);
-                                break;
-                        }
-                }
-                const orderNum = allOrders.length;
-                console.log('orderNum',orderNum);
-                res.send({status:200,success:true,message:'查询成功',orderNum})
+                //条件过滤
+                userOrders = userOrders.filter(item=>item.orderState===orderState);
             }
-             //普通员工，返回条件过滤后的订单数量
-            else
-            {
-                let userOrders = $db.orderPool.filter(item=>item.orderDetail.userId===userId*1);
-                if(orderState)
-                {
-                    //条件过滤
-                    userOrders = userOrders.filter(item=>item.orderState===orderState);
-                }
-                const orderNum = userOrders.length;
-                console.log('orderNum',orderNum);
-                res.send({status:200,success:true,message:'查询成功',orderNum})
-            }
+            const orderNum = userOrders.length;
+            res.send({status:200,success:true,message:'查询成功',orderNum})
         }
         else{
             res.send({status:200,success:false,message:'找不到该用户订单信息！'})
         }
       } else
       {
-          res.send({status:400,success:false,message:'客户端错误'});
+        console.log('在查看所有订单')
+        let allOrders = $db.orderPool;
+        if(orderState)
+        {
+            //条件过滤
+            allOrders = allOrders.filter(item=>item.orderState===orderState);
+        }
+        //如果搜索条件不等于all
+        if(searchType!=='all' && keyWord)
+        {
+            keyWord = keyWord.trim();
+            //keyWord非空时才查询
+            switch(searchType)
+                {
+                    case 'userName':
+                        allOrders = allOrders.filter(item=>item.orderDetail.username.indexOf(keyWord)>=0);
+                        break;
+                    case 'storeName':
+                        allOrders = allOrders.filter(item=>item.orderDetail.storeName.indexOf(keyWord)>=0);
+                        break;
+                    case 'orderId':
+                        allOrders = allOrders.filter(item=>item.orderId.indexOf(keyWord)>=0);
+                        break;
+                }
+        }
+        const orderNum = allOrders.length;
+        res.send({status:200,success:true,message:'查询成功',orderNum});
       }
 }
 

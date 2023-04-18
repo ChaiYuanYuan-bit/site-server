@@ -95,8 +95,25 @@
         "roleTypeId": 2,
         "roleTypeName": "普通员工"
       },
-      "balance": 7932,
-      "orders": []
+      "balance": 7040,
+      "orders": [
+        {
+          "id": 1,
+          "orderId": "fe898b78-2076-4e23-94ee-cc43d283bf75"
+        },
+        {
+          "id": 2,
+          "orderId": "3c89a8a6-0a00-4762-8c02-12ab0713c474"
+        },
+        {
+          "id": 3,
+          "orderId": "0b7cc0db-c2d6-4fe2-a830-dd5658ff2edb"
+        },
+        {
+          "id": 4,
+          "orderId": "8accf930-e8a2-414e-b984-7b7bff74b6f4"
+        }
+      ]
     },
     {
       "id": 6,
@@ -183,7 +200,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 99936
+            "comboCount": 99934
           },
           {
             "comboTypeId": 2,
@@ -417,7 +434,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 8
+            "comboCount": 9
           },
           {
             "comboTypeId": 2,
@@ -1895,7 +1912,7 @@
             "comboIntro": "简介：黑安格斯肉眼牛排",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_001.jpg",
             "comboPrice": 458,
-            "comboCount": 30
+            "comboCount": 26
           },
           {
             "comboTypeId": 2,
@@ -2478,6 +2495,7 @@
       "orderId": "52ea4891-ea36-4a4e-a181-a4b98eeadc5f",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "hotels",
         "goodsId": 1,
@@ -2510,6 +2528,7 @@
       "orderId": "e44e9cec-300c-4b9f-8524-f7c4ebb577cf",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "scenics",
         "goodsId": 1,
@@ -2542,6 +2561,7 @@
       "orderId": "56142181-ea3f-4644-87b4-6de1acd9638a",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "food",
         "goodsId": 2,
@@ -2573,6 +2593,7 @@
       "orderId": "3934c8e7-a935-46a1-b6b2-da3b056da27d",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "scenics",
         "goodsId": 1,
@@ -2605,6 +2626,7 @@
       "orderId": "8ccd2246-3584-4ae8-bcae-7a140d06c99d",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "scenics",
         "goodsId": 2,
@@ -2637,6 +2659,7 @@
       "orderId": "016ebbff-ec33-43ec-9254-6a216b2a042e",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "food",
         "goodsId": 2,
@@ -2668,6 +2691,7 @@
       "orderId": "7330fa4e-861c-4983-a4bf-ec9895522aca",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "food",
         "goodsId": 4,
@@ -2699,6 +2723,7 @@
       "orderId": "6afe4fe6-dc63-49bd-b6cb-ea86ae0979cb",
       "orderDetail": {
         "userId": 2,
+        "username": "柴园园",
         "roleTypeName": "管理员",
         "goodsTypeName": "scenics",
         "goodsId": 1,
@@ -2724,6 +2749,138 @@
       "orderTime": "2023-04-18 14:27:42:089",
       "orderState": "unpay",
       "orderStateName": "待付款"
+    },
+    {
+      "id": 9,
+      "orderId": "fe898b78-2076-4e23-94ee-cc43d283bf75",
+      "orderDetail": {
+        "userId": 5,
+        "username": "柴园园1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "food",
+        "goodsId": 2,
+        "storeName": "Efes Turkish & Mediterranean Cuisine 艾菲斯餐厅(陆家嘴店)",
+        "location": "商城路 665 号 1885 文化广场 B 座一层(近南泉北路)",
+        "comboId": 1,
+        "comboTypeName": "土耳其奶酪皮塔饼",
+        "comboIntro": "简介：土耳其奶酪皮塔饼",
+        "comboImgUrl": "http://localhost:3000/food_id_002_combotype_001.jpg",
+        "count": 3,
+        "comboPrice": 78,
+        "dataRange": [
+          "2023-04-18",
+          "2023-05-17"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 234
+      },
+      "orderTime": "2023-04-18 15:40:48:232",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-18 15:40:57:307"
+    },
+    {
+      "id": 10,
+      "orderId": "3c89a8a6-0a00-4762-8c02-12ab0713c474",
+      "orderDetail": {
+        "userId": 5,
+        "username": "柴园园1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "food",
+        "goodsId": 1,
+        "storeName": "POP 露台餐厅与酒吧",
+        "location": "广东路 17 号外滩三号 7 楼",
+        "comboId": 1,
+        "comboTypeName": "黑安格斯肉眼牛排",
+        "comboIntro": "简介：黑安格斯肉眼牛排",
+        "comboImgUrl": "http://localhost:3000/food_id_001_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 458,
+        "dataRange": [
+          "2023-04-18",
+          "2023-05-17"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 458
+      },
+      "orderTime": "2023-04-18 15:43:12:248",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-18 15:43:18:673"
+    },
+    {
+      "id": 11,
+      "orderId": "0b7cc0db-c2d6-4fe2-a830-dd5658ff2edb",
+      "orderDetail": {
+        "userId": 5,
+        "username": "柴园园1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 1,
+        "storeName": "汉庭上海宝钢月罗公路酒店",
+        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-18",
+          "2023-04-20"
+        ],
+        "days": 2,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-18 15:45:26:277",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-18 15:45:33:654"
+    },
+    {
+      "id": 12,
+      "orderId": "8accf930-e8a2-414e-b984-7b7bff74b6f4",
+      "orderDetail": {
+        "userId": 5,
+        "username": "柴园园1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 7,
+        "storeName": "汉庭上海五角场黄兴路酒店",
+        "location": "中国，上海，杨浦区，黄兴路 1675 号五角场科技大厦 3 楼",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-05-08",
+          "2023-05-11"
+        ],
+        "days": 3,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-18 16:06:20:773",
+      "orderState": "canceled",
+      "orderStateName": "已取消",
+      "finishTime": "2023-04-18 16:06:24:359"
     }
   ],
   "roleType": [
