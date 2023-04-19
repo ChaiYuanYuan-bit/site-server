@@ -341,7 +341,7 @@ exports.getUserOrderNum = async (req,res)=>{
     // 获取数据库
     const $db = await getDataBase.$db();
     // 用户
-    let {userId,orderState,searchType,keyWord} = req.query;
+    let {userId,orderState,searchInput} = req.query;
       //合法性检查
       if(userId)
       {
@@ -371,25 +371,34 @@ exports.getUserOrderNum = async (req,res)=>{
             //条件过滤
             allOrders = allOrders.filter(item=>item.orderState===orderState);
         }
-        //如果搜索条件不等于all
-        if(searchType!=='all' && keyWord)
+        //过滤搜索条件
+        if(searchInput!==undefined)
         {
-            keyWord = keyWord.trim();
-            //keyWord非空时才查询
-            switch(searchType)
-                {
-                    case 'userName':
-                        allOrders = allOrders.filter(item=>item.orderDetail.username.indexOf(keyWord)>=0);
-                        break;
-                    case 'storeName':
-                        allOrders = allOrders.filter(item=>item.orderDetail.storeName.indexOf(keyWord)>=0);
-                        break;
-                    case 'orderId':
-                        allOrders = allOrders.filter(item=>item.orderId.indexOf(keyWord)>=0);
-                        break;
-                }
+            //查询订单id
+            if(searchInput.orderId)
+            {
+                allOrders = allOrders.filter(item=>item.orderId.indexOf(searchInput.orderId)>=0);
+            }
+            if(searchInput.storeName)
+            {
+                allOrders = allOrders.filter(item=>item.orderDetail.storeName.indexOf(searchInput.storeName)>=0);
+            }
+            if(searchInput.orderTime&&searchInput.orderTime[0]&&searchInput.orderTime[1])
+            {
+                allOrders = allOrders.filter(item=>dayjs(item.orderTime).isAfter(searchInput.orderTime[0])
+                &&dayjs(item.orderTime).isBefore(searchInput.orderTime[1]));
+            }
+            if(searchInput.userName)
+            {
+                allOrders = allOrders.filter(item=>item.orderDetail.username.indexOf(searchInput.userName)>=0);
+            }
+            if(searchInput.roleTypeName)
+            {
+                allOrders = allOrders.filter(item=>item.orderDetail.roleTypeName.indexOf(searchInput.roleTypeName)>=0);
+            }
         }
         const orderNum = allOrders.length;
+        console.log(orderNum);
         res.send({status:200,success:true,message:'查询成功',orderNum});
       }
 }

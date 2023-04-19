@@ -76,6 +76,10 @@
         {
           "id": 13,
           "orderId": "bae0071d-8966-4103-9336-76df2d29dc62"
+        },
+        {
+          "id": 14,
+          "orderId": "743742ad-5df8-4e5f-b6cd-897a9a80ceed"
         }
       ]
     },
@@ -238,7 +242,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 99930
+            "comboCount": 99929
           },
           {
             "comboTypeId": 2,
@@ -3120,6 +3124,38 @@
       "orderState": "payed",
       "orderStateName": "待使用",
       "finishTime": "2023-04-18 22:26:13:693"
+    },
+    {
+      "id": 19,
+      "orderId": "743742ad-5df8-4e5f-b6cd-897a9a80ceed",
+      "orderDetail": {
+        "userId": 2,
+        "username": "柴园园",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "hotels",
+        "goodsId": 2,
+        "storeName": "汉庭上海宝山友谊路酒店",
+        "location": "中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-27",
+          "2023-04-29"
+        ],
+        "days": 2,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-19 14:01:42:693",
+      "orderState": "unpay",
+      "orderStateName": "待付款"
     }
   ],
   "roleType": [
