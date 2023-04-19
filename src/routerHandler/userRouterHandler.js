@@ -448,7 +448,7 @@ exports.getUserNum = async (req,res)=>{
     res.send({status:200,success:true,message:'查询成功',num});
 }
 
-//修改用户个人信息
+//修改用户信息
 exports.modifyUser = async(req,res)=>{
     // 获取数据库
     const $db = await getDataBase.$db();
@@ -472,6 +472,44 @@ exports.modifyUser = async(req,res)=>{
                 roleTypeId:roleType.id,
                 roleTypeName:roleType.roleName
             }
+            changed = true;
+        }
+        if(changed)
+        {
+          //写入JSON
+          writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+          .then(res.send({status:200,success:true,message:`修改成功`}))
+          .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+        }
+        else{
+            res.send({status:200,success:true,message:`修改成功`})
+        }
+    }
+    else{
+        res.send({status:400,success:false,message:'客户端错误'});
+    }
+}
+
+//修改自己信息
+exports.modifySelf = async(req,res)=>{
+    // 获取数据库
+    const $db = await getDataBase.$db();
+    // 用户
+    const {userId,phone,email} = req.body;
+    // 非空检查
+    if(userId!==undefined&&phone!==undefined&&email!==undefined)
+    {
+        const userIndex = $db.users.findIndex(item=>item.id===userId*1);
+        const userInfo = $db.users[userIndex];
+        let changed = false;
+        if(phone!==userInfo.phone)
+        {
+            $db.users[userIndex].phone = phone;
+            changed = true;
+        }
+        if(email!==userInfo.email)
+        {
+            $db.users[userIndex].email = email;
             changed = true;
         }
         if(changed)

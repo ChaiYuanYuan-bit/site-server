@@ -1,5 +1,5 @@
 const routes = require('../utils/constant');
-const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder,getUserOrderNum,getUserNum,modifyUser} = require('../routerHandler/userRouterHandler');
+const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder,getUserOrderNum,getUserNum,modifyUser,modifySelf} = require('../routerHandler/userRouterHandler');
 const {isAuthorized,isExpired} = require('../utils/verifyToken')
 const {passRoules} = require('../../config')
 
@@ -90,6 +90,9 @@ module.exports = (req,res,next)=>{
                             break;
                     case routes.MODIFY_USER:
                         setTimeout(()=>{modifyUser(req,res);},2000);
+                        break;
+                    case routes.MODIFY_SELF:
+                        setTimeout(()=>{modifySelf(req,res);},2000);
                         break;
                     default:next();
                 }
