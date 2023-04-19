@@ -394,7 +394,17 @@ exports.getUserOrderNum = async (req,res)=>{
             }
             if(searchInput.roleTypeName)
             {
-                allOrders = allOrders.filter(item=>item.orderDetail.roleTypeName.indexOf(searchInput.roleTypeName)>=0);
+                if(searchInput.roleTypeName!=='all')
+                {
+                    allOrders = allOrders.filter(item=>item.orderDetail.roleTypeName.indexOf(searchInput.roleTypeName)===searchInput.roleTypeName);
+                }
+            }
+            if(searchInput.goodsType)
+            {
+                if(searchInput.goodsType!=='all')
+                {
+                    allOrders = allOrders.filter(item=>item.orderDetail.goodsTypeName===searchInput.goodsType);
+                }
             }
         }
         const orderNum = allOrders.length;
