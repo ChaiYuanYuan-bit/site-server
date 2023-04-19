@@ -11,7 +11,8 @@ const CANCEL_ORDER = '/order/cancelOrder';
 const VERIFY_PAYCODE = '/pay/verifyPWD';
 const PAY_ORDER = '/pay/payOrder';
 const USER_ORDER_NUM = '/order/orderNum';
-const USER_NUM = '/user/userNum'
+const USER_NUM = '/user/userNum';
+const MODIFY_USER = '/user/modifyUser';
 module.exports = {
     POST,
     GET,
@@ -25,5 +26,6 @@ module.exports = {
     VERIFY_PAYCODE,
     PAY_ORDER,
     USER_ORDER_NUM,
-    USER_NUM
+    USER_NUM,
+    MODIFY_USER
 }
