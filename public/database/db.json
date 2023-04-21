@@ -703,7 +703,7 @@
             "comboIntro": "1张1.8米大床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_002.jpg",
             "comboPrice": 200,
-            "comboCount": -2
+            "comboCount": 46
           },
           {
             "comboTypeId": 3,
@@ -711,7 +711,7 @@
             "comboIntro": "1张1.5米大床 1张1.2米单人床 | 26m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_003.jpg",
             "comboPrice": 300,
-            "comboCount": -6
+            "comboCount": 39
           }
         ]
       }
@@ -742,7 +742,7 @@
             "comboIntro": "1张1.8米大床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_002.jpg",
             "comboPrice": 200,
-            "comboCount": 10
+            "comboCount": 32
           },
           {
             "comboTypeId": 3,
@@ -750,7 +750,7 @@
             "comboIntro": "1张1.5米大床 1张1.2米单人床 | 26m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_003.jpg",
             "comboPrice": 300,
-            "comboCount": 4
+            "comboCount": 20
           }
         ]
       }
@@ -789,7 +789,7 @@
             "comboIntro": "1张1.5米大床 1张1.2米单人床 | 26m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_003.jpg",
             "comboPrice": 300,
-            "comboCount": 4
+            "comboCount": 9
           }
         ]
       }
@@ -2178,7 +2178,7 @@
             "comboIntro": "仅限全日制在校高职、大专、本科生，需核验本人有效证件。",
             "comboImgUrl": "http://localhost:3000/scenics_id_001_combotype_001.jpg",
             "comboPrice": 210,
-            "comboCount": 21
+            "comboCount": 53
           },
           {
             "comboTypeId": 2,
@@ -2194,7 +2194,7 @@
             "comboIntro": "适用人群：两名成人与一名身高1.2米以上1.5米以下的儿童。",
             "comboImgUrl": "http://localhost:3000/scenics_id_001_combotype_003.jpg",
             "comboPrice": 690,
-            "comboCount": -15
+            "comboCount": 60
           }
         ]
       }
@@ -2407,7 +2407,7 @@
             "comboIntro": "简介：黑安格斯肉眼牛排",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_001.jpg",
             "comboPrice": 458,
-            "comboCount": -18
+            "comboCount":80
           },
           {
             "comboTypeId": 2,
@@ -2415,7 +2415,7 @@
             "comboIntro": "简介：生和牛牛肉色拉",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_002.jpg",
             "comboPrice": 98,
-            "comboCount": 29
+            "comboCount": 95
           },
           {
             "comboTypeId": 3,
@@ -2423,7 +2423,7 @@
             "comboIntro": "简介：香煎鹅肝",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_003.jpg",
             "comboPrice": 128,
-            "comboCount": 5
+            "comboCount": 100
           }
         ]
       }
