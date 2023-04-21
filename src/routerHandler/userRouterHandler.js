@@ -130,6 +130,7 @@ exports.addOrder = async (req,res)=>{
         const user = $db.users.find(item=>item.id===userId*1);
         const username = user.username;
         const roleTypeName = user.roleType.roleTypeName;
+        console.log("############",orderInfo)
         // 生成订单号
         const orderId = Guid.create();
         // 查询价格
@@ -176,7 +177,7 @@ exports.addOrder = async (req,res)=>{
             orderId:orderId
         });
         // 减少对应商品的数量
-        let goodsIndex = $db[goodsTypeName].findIndex(item=>item.id);
+        let goodsIndex = $db[goodsTypeName].findIndex(item=>item.id===goodsId);
         let comboIndex = goods.detail.comboType.findIndex(item=>item.comboTypeId===comboId);
         console.log($db[goodsTypeName][goodsIndex].detail.comboType[comboIndex])
         $db[goodsTypeName][goodsIndex].detail.comboType[comboIndex].comboCount -= count;

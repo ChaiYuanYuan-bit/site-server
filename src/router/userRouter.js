@@ -1,7 +1,6 @@
 const routes = require('../utils/constant');
 const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder,getUserOrderNum,getUserNum,modifyUser,modifySelf} = require('../routerHandler/userRouterHandler');
 const {isAuthorized,isExpired} = require('../utils/verifyToken')
-const {passRoules} = require('../../config')
 
 module.exports = (req,res,next)=>{
     /*
