@@ -8,16 +8,12 @@ const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 // 生成token的config
 const {jwtSecretKey,expiresIn} = require('../../config');
-// 引入封装好的axios
-const { axiosInstance } = require("../utils/request");
 // 引入封装好的文件系统
 const { writeFile } = require("../utils/file")
 // 引入注册用户初始余额
 const {initBalance} = require("../../config")
 // 引入路径
 const path = require("path")
-// 引入文件系统
-const fs = require('fs');
 // 引入封装好的guid
 const Guid = require('../utils/orderId');
 const dayjs = require("dayjs");
