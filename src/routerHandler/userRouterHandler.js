@@ -8,16 +8,12 @@ const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 // 生成token的config
 const {jwtSecretKey,expiresIn} = require('../../config');
-// 引入封装好的axios
-const { axiosInstance } = require("../utils/request");
 // 引入封装好的文件系统
 const { writeFile } = require("../utils/file")
 // 引入注册用户初始余额
 const {initBalance} = require("../../config")
 // 引入路径
 const path = require("path")
-// 引入文件系统
-const fs = require('fs');
 // 引入封装好的guid
 const Guid = require('../utils/orderId');
 const dayjs = require("dayjs");
@@ -130,6 +126,7 @@ exports.addOrder = async (req,res)=>{
         const user = $db.users.find(item=>item.id===userId*1);
         const username = user.username;
         const roleTypeName = user.roleType.roleTypeName;
+        console.log("############",orderInfo)
         // 生成订单号
         const orderId = Guid.create();
         // 查询价格
@@ -138,7 +135,7 @@ exports.addOrder = async (req,res)=>{
         let price = combo.comboPrice
         let discount = 0;
         // 计算总价
-        let totalPrice = count * price;
+        let totalPrice = count * price * (days*1);
         // 生成订单信息
         let newOrder = {
             id:$db.orderPool.length+1,
@@ -176,7 +173,7 @@ exports.addOrder = async (req,res)=>{
             orderId:orderId
         });
         // 减少对应商品的数量
-        let goodsIndex = $db[goodsTypeName].findIndex(item=>item.id);
+        let goodsIndex = $db[goodsTypeName].findIndex(item=>item.id===goodsId);
         let comboIndex = goods.detail.comboType.findIndex(item=>item.comboTypeId===comboId);
         console.log($db[goodsTypeName][goodsIndex].detail.comboType[comboIndex])
         $db[goodsTypeName][goodsIndex].detail.comboType[comboIndex].comboCount -= count;
@@ -448,7 +445,7 @@ exports.getUserNum = async (req,res)=>{
     res.send({status:200,success:true,message:'查询成功',num});
 }
 
-//修改用户个人信息
+//修改用户信息
 exports.modifyUser = async(req,res)=>{
     // 获取数据库
     const $db = await getDataBase.$db();
@@ -472,6 +469,44 @@ exports.modifyUser = async(req,res)=>{
                 roleTypeId:roleType.id,
                 roleTypeName:roleType.roleName
             }
+            changed = true;
+        }
+        if(changed)
+        {
+          //写入JSON
+          writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+          .then(res.send({status:200,success:true,message:`修改成功`}))
+          .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+        }
+        else{
+            res.send({status:200,success:true,message:`修改成功`})
+        }
+    }
+    else{
+        res.send({status:400,success:false,message:'客户端错误'});
+    }
+}
+
+//修改自己信息
+exports.modifySelf = async(req,res)=>{
+    // 获取数据库
+    const $db = await getDataBase.$db();
+    // 用户
+    const {userId,phone,email} = req.body;
+    // 非空检查
+    if(userId!==undefined&&phone!==undefined&&email!==undefined)
+    {
+        const userIndex = $db.users.findIndex(item=>item.id===userId*1);
+        const userInfo = $db.users[userIndex];
+        let changed = false;
+        if(phone!==userInfo.phone)
+        {
+            $db.users[userIndex].phone = phone;
+            changed = true;
+        }
+        if(email!==userInfo.email)
+        {
+            $db.users[userIndex].email = email;
             changed = true;
         }
         if(changed)

@@ -10,14 +10,55 @@
         "roleTypeId": 1,
         "roleTypeName": "管理员"
       },
-      "balance": 7000,
-      "orders": []
+      "balance": 4278,
+      "orders": [
+        {
+          "id": 1,
+          "orderId": "88dc0a2d-c87f-4667-bcd7-fa6fc5b3624b"
+        },
+        {
+          "id": 2,
+          "orderId": "6f415767-528a-4a11-a7ec-0e59c65e8d48"
+        },
+        {
+          "id": 3,
+          "orderId": "60ebfe5d-1543-4df2-b7c1-392e6c08ebab"
+        },
+        {
+          "id": 4,
+          "orderId": "2c260a47-b7ee-4426-af4c-94c1dc5f126c"
+        },
+        {
+          "id": 5,
+          "orderId": "aefebf20-b3b5-45cb-98e9-e42dd876f813"
+        },
+        {
+          "id": 6,
+          "orderId": "bea66f7a-776d-432f-8116-83c936a531cb"
+        },
+        {
+          "id": 7,
+          "orderId": "fc682442-1a92-467c-9cc7-9d52877fce97"
+        },
+        {
+          "id": 8,
+          "orderId": "0e33f96e-133e-4ff1-98e7-393c4a8c2ad5"
+        },
+        {
+          "id": 9,
+          "orderId": "f526d2c4-4cf0-42f6-ad4b-269e58c2c06c"
+        },
+        {
+          "id": 10,
+          "orderId": "35863b2c-cc34-47aa-b807-a6c388d935c0"
+        }
+      ]
     },
     {
       "id": 2,
       "username": "柴园园",
       "password": "$2a$10$6yuNXyWFEqiSJUfuM8fXbOkHNSKa41B0jDTwa8suocUtFkEC5puCi",
-      "phone": "15216757930",
+      "phone": "15216757931",
       "email": "449002049@qq.com",
       "roleType": {
         "roleTypeId": 1,
@@ -140,6 +181,10 @@
         {
           "id": 29,
           "orderId": "edcc2485-0e02-49ad-84ba-c6bca83b09da"
+        },
+        {
+          "id": 30,
+          "orderId": "3e4538cb-cc33-40cd-874d-92e7128bbbda"
         }
       ]
     },
@@ -377,14 +422,39 @@
       "id": 4,
       "username": "张三",
       "password": "$2a$10$hPHQkpXFOV2ARwnPs4A..uJyp4fardyVF2hifh9Vx07T2zce1Jl2C",
-      "phone": "15316345481",
+      "phone": "15216757930",
       "email": "15216757930@163.com",
       "roleType": {
         "roleTypeId": 2,
         "roleTypeName": "普通员工"
       },
-      "balance": 7000,
-      "orders": []
+      "balance": 9073,
+      "orders": [
+        {
+          "id": 1,
+          "orderId": "2339ed00-a1d1-49b4-af77-2b1736b3f865"
+        },
+        {
+          "id": 2,
+          "orderId": "76096ec1-112a-4458-90cd-2fc13c4bc84c"
+        },
+        {
+          "id": 3,
+          "orderId": "e43cbca0-1941-4c71-8201-e614ead3f041"
+        },
+        {
+          "id": 4,
+          "orderId": "9f87e295-04e9-47d1-b582-e19878691f45"
+        },
+        {
+          "id": 5,
+          "orderId": "0b6a471a-ce28-4c4d-b270-c3b67e1142ec"
+        },
+        {
+          "id": 6,
+          "orderId": "490983e2-7350-4e27-aa8d-c73523d032ae"
+        }
+      ]
     },
     {
       "id": 5,
@@ -515,11 +585,36 @@
       "phone": "15316345481",
       "email": "15216757930@163.com",
       "roleType": {
-        "roleTypeId": 3,
-        "roleTypeName": "未授权"
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
       },
-      "balance": 10000,
-      "orders": []
+      "balance": 1400,
+      "orders": [
+        {
+          "id": 1,
+          "orderId": "afdf2a5c-c930-4663-81c0-49be6d4d8341"
+        },
+        {
+          "id": 2,
+          "orderId": "16de2935-2f14-49e9-bc34-dd078b78f4f0"
+        },
+        {
+          "id": 3,
+          "orderId": "28730de0-ffe0-451b-92f9-4b82cf835150"
+        },
+        {
+          "id": 4,
+          "orderId": "e2d030f9-6a69-4b43-bdea-ab6fbf91ee27"
+        },
+        {
+          "id": 5,
+          "orderId": "4beea0c9-8df2-43ed-9409-2144fac4a35c"
+        },
+        {
+          "id": 6,
+          "orderId": "5c50f0bd-40a3-4bbb-acd6-3e75c01f76b5"
+        }
+      ]
     },
     {
       "id": 7,
@@ -674,6 +769,32 @@
           "orderId": "5feb4b90-79f8-4b96-a7d8-f904b5464e55"
         }
       ]
+    },
+    {
+      "id": 12,
+      "username": "testname",
+      "password": "$2a$10$9xhJGrTsiB7EX3zNWnWw6e3ut0wtZq0XzVfRTq59RMQ2XoxO0W//q",
+      "phone": "15216757930",
+      "email": "449002049@qq.com",
+      "roleType": {
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
+      },
+      "balance": 10000,
+      "orders": []
+    },
+    {
+      "id": 13,
+      "username": "manager",
+      "password": "$2a$10$M0wsdlczH4QWERJ5XlApMOGtnGjOkI0ozmHx7gnBRrPxEruTJqnSy",
+      "phone": "15266666666",
+      "email": "12356456456@qq.com",
+      "roleType": {
+        "roleTypeId": 1,
+        "roleTypeName": "管理员"
+      },
+      "balance": 10000,
+      "orders": []
     }
   ],
   "hotels": [
@@ -695,7 +816,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 99907
+            "comboCount": 99927
           },
           {
             "comboTypeId": 2,
@@ -703,7 +824,7 @@
             "comboIntro": "1张1.8米大床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_002.jpg",
             "comboPrice": 200,
-            "comboCount": 46
+            "comboCount": 15
           },
           {
             "comboTypeId": 3,
@@ -711,7 +832,7 @@
             "comboIntro": "1张1.5米大床 1张1.2米单人床 | 26m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_003.jpg",
             "comboPrice": 300,
-            "comboCount": 39
+            "comboCount": 9
           }
         ]
       }
@@ -734,7 +855,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 21
+            "comboCount": 19
           },
           {
             "comboTypeId": 2,
@@ -773,7 +894,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 8
+            "comboCount": 6
           },
           {
             "comboTypeId": 2,
@@ -2099,7 +2220,7 @@
             "comboIntro": "2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
             "comboImgUrl": "http://localhost:3000/hotel_B07_combotype_001.jpg",
             "comboPrice": 660,
-            "comboCount": 4
+            "comboCount": 2
           },
           {
             "comboTypeId": 2,
@@ -2138,7 +2259,7 @@
             "comboIntro": "2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
             "comboImgUrl": "http://localhost:3000/hotel_B08_combotype_001.jpg",
             "comboPrice": 780,
-            "comboCount": 5
+            "comboCount": 4
           },
           {
             "comboTypeId": 2,
@@ -2178,7 +2299,7 @@
             "comboIntro": "仅限全日制在校高职、大专、本科生，需核验本人有效证件。",
             "comboImgUrl": "http://localhost:3000/scenics_id_001_combotype_001.jpg",
             "comboPrice": 210,
-            "comboCount": 53
+            "comboCount": 45
           },
           {
             "comboTypeId": 2,
@@ -2216,7 +2337,7 @@
             "comboIntro": "年龄在3周岁-11周岁，或身高1.0米-1.4米。",
             "comboImgUrl": "http://localhost:3000/scenics_id_002_combotype_001.jpg",
             "comboPrice": 309,
-            "comboCount": 100
+            "comboCount": 97
           },
           {
             "comboTypeId": 2,
@@ -2407,7 +2528,7 @@
             "comboIntro": "简介：黑安格斯肉眼牛排",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_001.jpg",
             "comboPrice": 458,
-            "comboCount": 80
+            "comboCount":80
           },
           {
             "comboTypeId": 2,
@@ -3212,8 +3333,9 @@
         "totalPrice": 268
       },
       "orderTime": "2023-04-18 14:24:47:681",
-      "orderState": "unpay",
-      "orderStateName": "待付款"
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-21 18:12:36:326"
     },
     {
       "id": 8,
@@ -3607,6 +3729,171 @@
         "totalPrice": 200
       },
       "orderTime": "2023-04-19 14:01:42:693",
+      "orderState": "canceled",
+      "orderStateName": "已取消",
+      "finishTime": "2023-04-21 18:14:27:907"
+    },
+    {
+      "id": 20,
+      "orderId": "e0f8b512-4be1-4488-ab0a-4834f3696c61",
+      "orderDetail": {
+        "userId": 2,
+        "username": "柴园园",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "hotels",
+        "goodsId": 3,
+        "storeName": "汉庭上海罗店古镇酒店",
+        "location": "中国，上海，宝山区，罗店镇市一路 188 号",
+        "comboId": 3,
+        "comboTypeName": "三人间",
+        "comboIntro": "1张1.5米大床 1张1.2米单人床 | 26m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_003.jpg",
+        "count": 2,
+        "comboPrice": 300,
+        "dataRange": [
+          "2023-04-19",
+          "2023-04-22"
+        ],
+        "days": 3,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 600
+      },
+      "orderTime": "2023-04-19 15:32:54:178",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-19 15:33:04:742"
+    },
+    {
+      "id": 21,
+      "orderId": "fd1272ec-dae4-4d1b-b607-f88bdb139571",
+      "orderDetail": {
+        "userId": 2,
+        "username": "柴园园",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "scenics",
+        "goodsId": 3,
+        "storeName": "上海野生动物园",
+        "location": "上海市浦东新区南六公路 178 号",
+        "comboId": 1,
+        "comboTypeName": "优待票",
+        "comboIntro": "未成年：身高130以上或7-18周岁，学生：全日制大学本科及以下学历学生。",
+        "comboImgUrl": "http://localhost:3000/scenics_id_003_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 82.5,
+        "dataRange": [
+          "2023-04-22 00:00",
+          "2023-04-22 23:59"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 82.5
+      },
+      "orderTime": "2023-04-19 15:33:19:680",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-19 15:34:23:488"
+    },
+    {
+      "id": 22,
+      "orderId": "c80ec380-8200-4cdf-a6f3-c828aeaa4928",
+      "orderDetail": {
+        "userId": 2,
+        "username": "柴园园",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "food",
+        "goodsId": 11,
+        "storeName": "馬伍旺饮料厂(日月光店)",
+        "location": "徐家汇路 618 号 B2-RJ-24 室",
+        "comboId": 1,
+        "comboTypeName": "雪顶幽兰",
+        "comboIntro": "简介：雪顶幽兰",
+        "comboImgUrl": "http://localhost:3000/food_id_011_combotype_001.jpg",
+        "count": 4,
+        "comboPrice": 19,
+        "dataRange": [
+          "2023-04-19",
+          "2023-05-18"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 76
+      },
+      "orderTime": "2023-04-19 15:33:40:300",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-19 15:33:47:723"
+    },
+    {
+      "id": 23,
+      "orderId": "2339ed00-a1d1-49b4-af77-2b1736b3f865",
+      "orderDetail": {
+        "userId": 4,
+        "username": "张三",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "food",
+        "goodsId": 12,
+        "storeName": "老兴鲜餐厅",
+        "location": "淮海中路 918 号百盛商场 5 楼",
+        "comboId": 1,
+        "comboTypeName": "老兴鲜全家福",
+        "comboIntro": "简介：老兴鲜全家福",
+        "comboImgUrl": "http://localhost:3000/food_id_012_combotype_001.jpg",
+        "count": 2,
+        "comboPrice": 188,
+        "dataRange": [
+          "2023-04-19",
+          "2023-05-18"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 376
+      },
+      "orderTime": "2023-04-19 15:36:02:491",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-19 15:36:10:155"
+    },
+    {
+      "id": 24,
+      "orderId": "d84f8f83-6235-45bd-b95b-c52373a37844",
+      "orderDetail": {
+        "userId": 2,
+        "username": "柴园园",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "hotels",
+        "goodsId": 1,
+        "storeName": "汉庭上海宝钢月罗公路酒店",
+        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-19",
+          "2023-04-22"
+        ],
+        "days": 3,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-19 20:43:49:865",
       "orderState": "unpay",
       "orderStateName": "待付款"
     },
@@ -7304,6 +7591,234 @@
       "orderState": "finished",
       "orderStateName": "已完成",
       "finishTime": "2023-04-21 20:20:33:173"
+    },
+    {
+      "id": 138,
+      "orderId": "3e4538cb-cc33-40cd-874d-92e7128bbbda",
+      "orderDetail": {
+        "userId": 2,
+        "username": "柴园园",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "hotels",
+        "goodsId": 2,
+        "storeName": "汉庭上海宝山友谊路酒店",
+        "location": "中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-22"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-21 20:41:20:496",
+      "orderState": "unpay",
+      "orderStateName": "待付款"
+    },
+    {
+      "id": 139,
+      "orderId": "afdf2a5c-c930-4663-81c0-49be6d4d8341",
+      "orderDetail": {
+        "userId": 6,
+        "username": "张三1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 38,
+        "storeName": "上海证大美爵酒店",
+        "location": "中国，上海，浦东新区，迎春路 1199 号",
+        "comboId": 1,
+        "comboTypeName": "美爵嘉宾双床房",
+        "comboIntro": "2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
+        "comboImgUrl": "http://localhost:3000/hotel_B08_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 780,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-26"
+        ],
+        "days": 5,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 780
+      },
+      "orderTime": "2023-04-21 22:11:48:347",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-21 22:12:02:675"
+    },
+    {
+      "id": 140,
+      "orderId": "16de2935-2f14-49e9-bc34-dd078b78f4f0",
+      "orderDetail": {
+        "userId": 6,
+        "username": "张三1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 1,
+        "storeName": "汉庭上海宝钢月罗公路酒店",
+        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-28"
+        ],
+        "days": 7,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-21 22:12:38:141",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-21 22:12:45:809"
+    },
+    {
+      "id": 141,
+      "orderId": "28730de0-ffe0-451b-92f9-4b82cf835150",
+      "orderDetail": {
+        "userId": 6,
+        "username": "张三1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 1,
+        "storeName": "汉庭上海宝钢月罗公路酒店",
+        "location": "中国，上海，宝山区，月罗公路 249 弄 28 号",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-28"
+        ],
+        "days": 7,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 200
+      },
+      "orderTime": "2023-04-21 22:14:15:763",
+      "orderState": "unpay",
+      "orderStateName": "待付款"
+    },
+    {
+      "id": 142,
+      "orderId": "e2d030f9-6a69-4b43-bdea-ab6fbf91ee27",
+      "orderDetail": {
+        "userId": 6,
+        "username": "张三1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 37,
+        "storeName": "上海陆家嘴禧玥酒店",
+        "location": "中国，上海，浦东新区，浦明路 868 弄 3 号楼",
+        "comboId": 1,
+        "comboTypeName": "豪华江景双床房",
+        "comboIntro": "2张1.2米单人床 | 30m² | 有窗 | 禁烟 | 2份早餐",
+        "comboImgUrl": "http://localhost:3000/hotel_B07_combotype_001.jpg",
+        "count": 2,
+        "comboPrice": 660,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-22"
+        ],
+        "days": 1,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 1320
+      },
+      "orderTime": "2023-04-21 22:15:01:917",
+      "orderState": "unpay",
+      "orderStateName": "待付款"
+    },
+    {
+      "id": 143,
+      "orderId": "4beea0c9-8df2-43ed-9409-2144fac4a35c",
+      "orderDetail": {
+        "userId": 6,
+        "username": "张三1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 3,
+        "storeName": "汉庭上海罗店古镇酒店",
+        "location": "中国，上海，宝山区，罗店镇市一路 188 号",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 2,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-23"
+        ],
+        "days": 2,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 800
+      },
+      "orderTime": "2023-04-21 22:22:53:706",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-21 22:23:01:650"
+    },
+    {
+      "id": 144,
+      "orderId": "5c50f0bd-40a3-4bbb-acd6-3e75c01f76b5",
+      "orderDetail": {
+        "userId": 6,
+        "username": "张三1",
+        "roleTypeName": "普通员工",
+        "goodsTypeName": "hotels",
+        "goodsId": 2,
+        "storeName": "汉庭上海宝山友谊路酒店",
+        "location": "中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 2,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-21",
+          "2023-04-23"
+        ],
+        "days": 2,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 800
+      },
+      "orderTime": "2023-04-21 22:24:35:784",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-21 22:24:43:518"
     }
   ],
   "roleType": [

@@ -13,6 +13,7 @@ const PAY_ORDER = '/pay/payOrder';
 const USER_ORDER_NUM = '/order/orderNum';
 const USER_NUM = '/user/userNum';
 const MODIFY_USER = '/user/modifyUser';
+const MODIFY_SELF = '/user/modifySelf';
 module.exports = {
     POST,
     GET,
@@ -27,5 +28,6 @@ module.exports = {
     PAY_ORDER,
     USER_ORDER_NUM,
     USER_NUM,
-    MODIFY_USER
+    MODIFY_USER,
+    MODIFY_SELF
 }

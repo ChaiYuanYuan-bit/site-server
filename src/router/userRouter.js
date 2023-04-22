@@ -1,7 +1,6 @@
 const routes = require('../utils/constant');
-const {login,register,getUser,addOrder,verifyPayCode,payOrder,cancelOrder,getUserOrderNum,getUserNum,modifyUser} = require('../routerHandler/userRouterHandler');
+const routerHandler = require('../routerHandler/userRouterHandler');
 const {isAuthorized,isExpired} = require('../utils/verifyToken')
-const {passRoules} = require('../../config')
 
 module.exports = (req,res,next)=>{
     /*
@@ -48,13 +47,13 @@ module.exports = (req,res,next)=>{
                 switch(req.path)
                 {
                     case routes.GETUSER:
-                            getUser(req,res);
+                            routerHandler.getUser(req,res);
                             break;
                     case routes.USER_ORDER_NUM:
-                            getUserOrderNum(req,res);
+                            routerHandler.getUserOrderNum(req,res);
                             break;
                     case routes.USER_NUM:
-                            getUserNum(req,res);
+                            routerHandler.getUserNum(req,res);
                             break;
                     default:next();
                 }
@@ -66,30 +65,33 @@ module.exports = (req,res,next)=>{
                 {
                     //登录
                     case routes.LOGIN:
-                            login(req,res);
+                            routerHandler.login(req,res);
                             break;
                     //注册
                     case routes.REGISTER:
-                            register(req,res);
+                            routerHandler.register(req,res);
                             break;
                     //添加订单
                     case routes.ADD_ORDER:
-                        setTimeout(()=>{addOrder(req,res);},2000);
+                        setTimeout(()=>{routerHandler.addOrder(req,res);},2000);
                             break;
                     //取消订单
                     case routes.CANCEL_ORDER:
-                        setTimeout(()=>{cancelOrder(req,res);},2000);
+                        setTimeout(()=>{routerHandler.cancelOrder(req,res);},2000);
                             break;
                     // 验证支付密码
                     case routes.VERIFY_PAYCODE:
-                        setTimeout(()=>{verifyPayCode(req,res);},2000);
+                        setTimeout(()=>{routerHandler.verifyPayCode(req,res);},2000);
                             break;
                     // 支付订单
                     case routes.PAY_ORDER:
-                        setTimeout(()=>{payOrder(req,res);},2000);
+                        setTimeout(()=>{routerHandler.payOrder(req,res);},2000);
                             break;
                     case routes.MODIFY_USER:
-                        setTimeout(()=>{modifyUser(req,res);},2000);
+                        setTimeout(()=>{routerHandler.modifyUser(req,res);},2000);
+                        break;
+                    case routes.MODIFY_SELF:
+                        setTimeout(()=>{routerHandler.modifySelf(req,res);},2000);
                         break;
                     default:next();
                 }
