@@ -380,8 +380,8 @@
       "phone": "15316345481",
       "email": "15216757930@163.com",
       "roleType": {
-        "roleTypeId": 3,
-        "roleTypeName": "未授权"
+        "roleTypeId": 2,
+        "roleTypeName": "普通员工"
       },
       "balance": 7000,
       "orders": []
@@ -2407,7 +2407,7 @@
             "comboIntro": "简介：黑安格斯肉眼牛排",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_001.jpg",
             "comboPrice": 458,
-            "comboCount":80
+            "comboCount": 80
           },
           {
             "comboTypeId": 2,
