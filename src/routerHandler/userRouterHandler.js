@@ -139,7 +139,7 @@ exports.addOrder = async (req,res)=>{
         let price = combo.comboPrice
         let discount = 0;
         // 计算总价
-        let totalPrice = count * price;
+        let totalPrice = count * price * (days*1);
         // 生成订单信息
         let newOrder = {
             id:$db.orderPool.length+1,
