@@ -337,6 +337,12 @@ exports.payOrder = async (req,res)=>{
 exports.getUserOrderNum = async (req,res)=>{
     // 获取数据库
     const $db = await getDataBase.$db();
+    // let orderPool = $db.orderPool.map((item,index)=>({...item,id:index}));
+    // $db.orderPool = orderPool;
+    // //写入JSON
+    // writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+    // .then(res.send({status:200,success:true,message:`修改成功`}))
+    // .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
     // 用户
     let {userId,orderState,searchInput} = req.query;
       //合法性检查
@@ -393,7 +399,7 @@ exports.getUserOrderNum = async (req,res)=>{
             {
                 if(searchInput.roleTypeName!=='all')
                 {
-                    allOrders = allOrders.filter(item=>item.orderDetail.roleTypeName.indexOf(searchInput.roleTypeName)===searchInput.roleTypeName);
+                    allOrders = allOrders.filter(item=>item.orderDetail.roleTypeName===searchInput.roleTypeName);
                 }
             }
             if(searchInput.goodsType)
@@ -457,29 +463,36 @@ exports.modifyUser = async(req,res)=>{
         const userIndex = $db.users.findIndex(item=>item.id===userId*1);
         const userInfo = $db.users[userIndex];
         let changed = false;
-        if(balance*1!==userInfo.balance)
+        if($db.users[userIndex].username==='admin')
         {
-            $db.users[userIndex].balance = balance;
-            changed = true;
+            res.send({status:200,success:false,message:`无法修改初始管理员`});
         }
-        if(roleTypeId*1!==userInfo.roleType.roleTypeId)
+        else
         {
-            const roleType = $db.roleType.find(item=>item.id===roleTypeId);
-            $db.users[userIndex].roleType = {
-                roleTypeId:roleType.id,
-                roleTypeName:roleType.roleName
+            if(balance*1!==userInfo.balance)
+            {
+                $db.users[userIndex].balance = balance;
+                changed = true;
             }
-            changed = true;
-        }
-        if(changed)
-        {
-          //写入JSON
-          writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
-          .then(res.send({status:200,success:true,message:`修改成功`}))
-          .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
-        }
-        else{
-            res.send({status:200,success:true,message:`修改成功`})
+            if(roleTypeId*1!==userInfo.roleType.roleTypeId)
+            {
+                const roleType = $db.roleType.find(item=>item.id===roleTypeId);
+                $db.users[userIndex].roleType = {
+                    roleTypeId:roleType.id,
+                    roleTypeName:roleType.roleName
+                }
+                changed = true;
+            }
+            if(changed)
+            {
+              //写入JSON
+              writeFile(path.join(__dirname,'../../public/database/db.json'),JSON.stringify($db,null,2))
+              .then(res.send({status:200,success:true,message:`修改成功`}))
+              .catch(error=>res.send({status:500,success:false,message:'服务端错误，请稍后再试！'}));
+            }
+            else{
+                res.send({status:200,success:true,message:`修改成功`});
+            }
         }
     }
     else{
