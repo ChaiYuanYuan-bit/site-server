@@ -930,8 +930,17 @@
         "roleTypeId": 1,
         "roleTypeName": "管理员"
       },
-      "balance": 10000,
-      "orders": []
+      "balance": 8700,
+      "orders": [
+        {
+          "id": 1,
+          "orderId": "ac0c8ed8-c0f9-496c-b678-8421acb680bc"
+        },
+        {
+          "id": 2,
+          "orderId": "47d494f7-f920-4b9f-adc6-0243d1a4e342"
+        }
+      ]
     }
   ],
   "hotels": [
@@ -992,7 +1001,7 @@
             "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
             "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
             "comboPrice": 200,
-            "comboCount": 18
+            "comboCount": 17
           },
           {
             "comboTypeId": 2,
@@ -2248,7 +2257,7 @@
             "comboIntro": "1张1.8米大床 | 30m² | 有窗 | 禁烟 | 2份早餐",
             "comboImgUrl": "http://localhost:3000/hotel_B05_combotype_002.jpg",
             "comboPrice": 350,
-            "comboCount": 8
+            "comboCount": 7
           },
           {
             "comboTypeId": 3,
@@ -2665,7 +2674,7 @@
             "comboIntro": "简介：黑安格斯肉眼牛排",
             "comboImgUrl": "http://localhost:3000/food_id_001_combotype_001.jpg",
             "comboPrice": 458,
-            "comboCount":80
+            "comboCount": 80
           },
           {
             "comboTypeId": 2,
@@ -8413,6 +8422,72 @@
       "orderState": "payed",
       "orderStateName": "待使用",
       "finishTime": "2023-04-24 12:36:44:242"
+    },
+    {
+      "id": 159,
+      "orderId": "ac0c8ed8-c0f9-496c-b678-8421acb680bc",
+      "orderDetail": {
+        "userId": 19,
+        "username": "test6",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "hotels",
+        "goodsId": 34,
+        "storeName": "上海陆家嘴东方明珠 CitiGO 酒店",
+        "location": "中国，上海，浦东新区，商城路 357 号(浦城路口)",
+        "comboId": 2,
+        "comboTypeName": "欢阁大床房",
+        "comboIntro": "1张1.8米大床 | 30m² | 有窗 | 禁烟 | 2份早餐",
+        "comboImgUrl": "http://localhost:3000/hotel_B05_combotype_002.jpg",
+        "count": 1,
+        "comboPrice": 350,
+        "dataRange": [
+          "2023-04-27",
+          "2023-04-29"
+        ],
+        "days": 2,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 700
+      },
+      "orderTime": "2023-04-24 13:35:57:667",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-24 13:36:16:017"
+    },
+    {
+      "id": 160,
+      "orderId": "47d494f7-f920-4b9f-adc6-0243d1a4e342",
+      "orderDetail": {
+        "userId": 19,
+        "username": "test6",
+        "roleTypeName": "管理员",
+        "goodsTypeName": "hotels",
+        "goodsId": 2,
+        "storeName": "汉庭上海宝山友谊路酒店",
+        "location": "中国，上海，宝山区，友谊路 48 号 5 幢 1-4 层",
+        "comboId": 1,
+        "comboTypeName": "标准间",
+        "comboIntro": "2张1.2米单人床 | 21m² | 有窗 | 禁烟",
+        "comboImgUrl": "http://localhost:3000/hotel_B01_combotype_001.jpg",
+        "count": 1,
+        "comboPrice": 200,
+        "dataRange": [
+          "2023-04-24",
+          "2023-04-27"
+        ],
+        "days": 3,
+        "payType": [
+          "余额支付"
+        ],
+        "discount": 0,
+        "totalPrice": 600
+      },
+      "orderTime": "2023-04-24 13:37:59:433",
+      "orderState": "payed",
+      "orderStateName": "待使用",
+      "finishTime": "2023-04-24 13:38:08:757"
     }
   ],
   "roleType": [
