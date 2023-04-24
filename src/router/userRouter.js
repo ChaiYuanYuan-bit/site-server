@@ -87,9 +87,11 @@ module.exports = (req,res,next)=>{
                     case routes.PAY_ORDER:
                         setTimeout(()=>{routerHandler.payOrder(req,res);},2000);
                             break;
+                    // 修改用户信息
                     case routes.MODIFY_USER:
                         setTimeout(()=>{routerHandler.modifyUser(req,res);},2000);
                         break;
+                    // 修改个人信息
                     case routes.MODIFY_SELF:
                         setTimeout(()=>{routerHandler.modifySelf(req,res);},2000);
                         break;
